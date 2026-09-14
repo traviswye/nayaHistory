@@ -1,0 +1,10 @@
+# The installer binaries are vendor material: mirrored to disk, never committed.
+# The git-tracked record is MANIFEST.json + changelogs/ + README.md.
+releases/
+*.exe
+*.dmg
+*.zip
+*.AppImage
+*.blockmap
+# keep the small update-metadata yml files (they're text, tiny, and useful)
+!releases/**/*.yml
