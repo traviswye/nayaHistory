@@ -40,7 +40,7 @@ def main():
     done = skipped = failed = 0
     total = sum(len(r["assets"]) for r in M["releases"])
     i = 0
-    for rel in M["releases"]:
+    for rel in reversed(M["releases"]):  # oldest-first: research targets first
         d = ROOT / "releases" / rel["tag"]
         d.mkdir(parents=True, exist_ok=True)
         for a in rel["assets"]:

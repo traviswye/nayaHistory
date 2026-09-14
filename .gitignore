@@ -8,3 +8,6 @@ releases/
 *.blockmap
 # keep the small update-metadata yml files (they're text, tiny, and useful)
 !releases/**/*.yml
+
+# Extracted vendor firmware images: kept on disk, catalogued in FIRMWARE-HISTORY.md, never committed.
+firmware-history/
