@@ -1,0 +1,1461 @@
+[
+  {
+    "tag": "v0.0.1",
+    "source_platform": "mac",
+    "firmware_names": [
+      "fwl.bin",
+      "fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 286500,
+        "img_size": 285392,
+        "encrypted": true,
+        "plaintext_sha256": "b942c1772f68ec81bdbf769f087609f4fecd1bc4a9141124bbb54c9f71066b60",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "1d6ab7dc6b8660378d5e8774713dbe9ee09c89f11e369ed2a7328afe93662429"
+      },
+      {
+        "name": "fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 219364,
+        "img_size": 218256,
+        "encrypted": true,
+        "plaintext_sha256": "47ab8461e72a9779ab28defb34a850ee196050668fb19b897a10d629048b82f0",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "edbfd002870038c372cda2b7e9f65bc254761d3207cfd208c41e93653baae262"
+      }
+    ]
+  },
+  {
+    "tag": "v0.0.2",
+    "source_platform": "mac",
+    "firmware_names": [
+      "fwl.bin",
+      "fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 286500,
+        "img_size": 285392,
+        "encrypted": true,
+        "plaintext_sha256": "b942c1772f68ec81bdbf769f087609f4fecd1bc4a9141124bbb54c9f71066b60",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "1d6ab7dc6b8660378d5e8774713dbe9ee09c89f11e369ed2a7328afe93662429"
+      },
+      {
+        "name": "fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 219364,
+        "img_size": 218256,
+        "encrypted": true,
+        "plaintext_sha256": "47ab8461e72a9779ab28defb34a850ee196050668fb19b897a10d629048b82f0",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "edbfd002870038c372cda2b7e9f65bc254761d3207cfd208c41e93653baae262"
+      }
+    ]
+  },
+  {
+    "tag": "v0.1.0",
+    "source_platform": "mac",
+    "firmware_names": [
+      "d_fw.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "d_fw.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 331776,
+        "type": "mcuboot",
+        "mcuboot_image_len": 176244,
+        "img_size": 175136,
+        "encrypted": true,
+        "plaintext_sha256": "7822d9d0e768954aad2f06485c4b269881b48c9a93c616fec2134cd42e805a40",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "5b302ad3d420fbc18208d389d08e7930ae8825fb7c268684669ea1cd0d853d16"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 314500,
+        "img_size": 313392,
+        "encrypted": true,
+        "plaintext_sha256": "ce6d82b91b2246feb72505a0addcf93246e543e285b8ca347c56942344011756",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "e0efc048e25cc801d653ab10556599a2ce3c1e58488c943591866799ccec8923"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 236404,
+        "img_size": 235296,
+        "encrypted": true,
+        "plaintext_sha256": "066ebb1c07644226daef1c49960723fd1ddfb5210182c1c501b1b82a32ef7f2e",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "b4a87dce14a1d9840deab2085e69b4967e3301664a0917ab54cacf2ad731082b"
+      }
+    ]
+  },
+  {
+    "tag": "v0.1.1",
+    "source_platform": "mac",
+    "firmware_names": [
+      "d_fw.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "d_fw.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 331776,
+        "type": "mcuboot",
+        "mcuboot_image_len": 176244,
+        "img_size": 175136,
+        "encrypted": true,
+        "plaintext_sha256": "7822d9d0e768954aad2f06485c4b269881b48c9a93c616fec2134cd42e805a40",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "5b302ad3d420fbc18208d389d08e7930ae8825fb7c268684669ea1cd0d853d16"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 314500,
+        "img_size": 313392,
+        "encrypted": true,
+        "plaintext_sha256": "ce6d82b91b2246feb72505a0addcf93246e543e285b8ca347c56942344011756",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "e0efc048e25cc801d653ab10556599a2ce3c1e58488c943591866799ccec8923"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 236404,
+        "img_size": 235296,
+        "encrypted": true,
+        "plaintext_sha256": "066ebb1c07644226daef1c49960723fd1ddfb5210182c1c501b1b82a32ef7f2e",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "b4a87dce14a1d9840deab2085e69b4967e3301664a0917ab54cacf2ad731082b"
+      }
+    ]
+  },
+  {
+    "tag": "v1.3.8",
+    "source_platform": "mac",
+    "firmware_names": [
+      "d_fw.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "d_fw.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 331776,
+        "type": "mcuboot",
+        "mcuboot_image_len": 176244,
+        "img_size": 175136,
+        "encrypted": true,
+        "plaintext_sha256": "7822d9d0e768954aad2f06485c4b269881b48c9a93c616fec2134cd42e805a40",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "5b302ad3d420fbc18208d389d08e7930ae8825fb7c268684669ea1cd0d853d16"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 353364,
+        "img_size": 352256,
+        "encrypted": true,
+        "plaintext_sha256": "ce51a353d7806494978aa0a1e1d4a199d0fa32c547dc0b97c5d21f8a51dfa09b",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f90a9ae4d6d4fb74e8db5862de452849d538712195002a43f5780279347acfa1"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 240292,
+        "img_size": 239184,
+        "encrypted": true,
+        "plaintext_sha256": "31ceec1a3bf05a962c713fc55de0110015840942bea5b24908d3859d4f227317",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "d0ca69a6ef51e71a39653c5cf12306c3ae8ff4ecf2a77490f667cd07b1acc14c"
+      }
+    ]
+  },
+  {
+    "tag": "v1.3.11",
+    "source_platform": "mac",
+    "firmware_names": [
+      "d_fw.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "d_fw.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 331776,
+        "type": "mcuboot",
+        "mcuboot_image_len": 176244,
+        "img_size": 175136,
+        "encrypted": true,
+        "plaintext_sha256": "7822d9d0e768954aad2f06485c4b269881b48c9a93c616fec2134cd42e805a40",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "5b302ad3d420fbc18208d389d08e7930ae8825fb7c268684669ea1cd0d853d16"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 353364,
+        "img_size": 352256,
+        "encrypted": true,
+        "plaintext_sha256": "ce51a353d7806494978aa0a1e1d4a199d0fa32c547dc0b97c5d21f8a51dfa09b",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f90a9ae4d6d4fb74e8db5862de452849d538712195002a43f5780279347acfa1"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 240292,
+        "img_size": 239184,
+        "encrypted": true,
+        "plaintext_sha256": "31ceec1a3bf05a962c713fc55de0110015840942bea5b24908d3859d4f227317",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "d0ca69a6ef51e71a39653c5cf12306c3ae8ff4ecf2a77490f667cd07b1acc14c"
+      }
+    ]
+  },
+  {
+    "tag": "v1.6.4",
+    "source_platform": "mac",
+    "firmware_names": [
+      "d_fw.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "d_fw.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 331776,
+        "type": "mcuboot",
+        "mcuboot_image_len": 176244,
+        "img_size": 175136,
+        "encrypted": true,
+        "plaintext_sha256": "7822d9d0e768954aad2f06485c4b269881b48c9a93c616fec2134cd42e805a40",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "5b302ad3d420fbc18208d389d08e7930ae8825fb7c268684669ea1cd0d853d16"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 353364,
+        "img_size": 352256,
+        "encrypted": true,
+        "plaintext_sha256": "ce51a353d7806494978aa0a1e1d4a199d0fa32c547dc0b97c5d21f8a51dfa09b",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f90a9ae4d6d4fb74e8db5862de452849d538712195002a43f5780279347acfa1"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 240292,
+        "img_size": 239184,
+        "encrypted": true,
+        "plaintext_sha256": "31ceec1a3bf05a962c713fc55de0110015840942bea5b24908d3859d4f227317",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "d0ca69a6ef51e71a39653c5cf12306c3ae8ff4ecf2a77490f667cd07b1acc14c"
+      }
+    ]
+  },
+  {
+    "tag": "v1.6.5",
+    "source_platform": "mac",
+    "firmware_names": [
+      "d_fw.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "d_fw.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 331776,
+        "type": "mcuboot",
+        "mcuboot_image_len": 176244,
+        "img_size": 175136,
+        "encrypted": true,
+        "plaintext_sha256": "7822d9d0e768954aad2f06485c4b269881b48c9a93c616fec2134cd42e805a40",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "5b302ad3d420fbc18208d389d08e7930ae8825fb7c268684669ea1cd0d853d16"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 353364,
+        "img_size": 352256,
+        "encrypted": true,
+        "plaintext_sha256": "ce51a353d7806494978aa0a1e1d4a199d0fa32c547dc0b97c5d21f8a51dfa09b",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f90a9ae4d6d4fb74e8db5862de452849d538712195002a43f5780279347acfa1"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 240292,
+        "img_size": 239184,
+        "encrypted": true,
+        "plaintext_sha256": "31ceec1a3bf05a962c713fc55de0110015840942bea5b24908d3859d4f227317",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "d0ca69a6ef51e71a39653c5cf12306c3ae8ff4ecf2a77490f667cd07b1acc14c"
+      }
+    ]
+  },
+  {
+    "tag": "v1.6.10",
+    "source_platform": "mac",
+    "firmware_names": [
+      "d_fw.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "d_fw.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 331776,
+        "type": "mcuboot",
+        "mcuboot_image_len": 176244,
+        "img_size": 175136,
+        "encrypted": true,
+        "plaintext_sha256": "7822d9d0e768954aad2f06485c4b269881b48c9a93c616fec2134cd42e805a40",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "5b302ad3d420fbc18208d389d08e7930ae8825fb7c268684669ea1cd0d853d16"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 353364,
+        "img_size": 352256,
+        "encrypted": true,
+        "plaintext_sha256": "ce51a353d7806494978aa0a1e1d4a199d0fa32c547dc0b97c5d21f8a51dfa09b",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f90a9ae4d6d4fb74e8db5862de452849d538712195002a43f5780279347acfa1"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 240292,
+        "img_size": 239184,
+        "encrypted": true,
+        "plaintext_sha256": "31ceec1a3bf05a962c713fc55de0110015840942bea5b24908d3859d4f227317",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "d0ca69a6ef51e71a39653c5cf12306c3ae8ff4ecf2a77490f667cd07b1acc14c"
+      }
+    ]
+  },
+  {
+    "tag": "v1.11.0",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "fc354e74a32237d71d7619cd7b506ae9010db37c6779d3a4e5c4c3154e18ec45"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 357956,
+        "img_size": 356848,
+        "encrypted": true,
+        "plaintext_sha256": "83100f7b0f58c2abb53ba24378c3ef963e61e2abad2b43df2eecb9ed85e6949a",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "0f616a64c631d605586cdb44983dbf89ecd759d0769a707db7b30d95d1b3955f"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 243812,
+        "img_size": 242704,
+        "encrypted": true,
+        "plaintext_sha256": "ec1bbca40c74f91cddb0e1904708363f1199a88f5f6bca555fa15d7e7af13843",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "4d9899ed6b1bc07bf0b52b5cd8427c80fb100fe81c3ef02c28e6bf01769f9b3e"
+      }
+    ]
+  },
+  {
+    "tag": "v1.11.8",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "fc354e74a32237d71d7619cd7b506ae9010db37c6779d3a4e5c4c3154e18ec45"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 359124,
+        "img_size": 358016,
+        "encrypted": true,
+        "plaintext_sha256": "e3a7afc4e765c631d35aeae4133e611ca529502a6c3cea7e6417f2053e79d76c",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "6ba340b81744eae4b68ac58b13daee4abf7782c96e036445abfd725dbfdf443e"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 244420,
+        "img_size": 243312,
+        "encrypted": true,
+        "plaintext_sha256": "93b050dcf560fa43bce8bb172c252ba4ea1b761aefc425b86c7a362ef4a88c53",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "b3a7b61dd2c31a9b927d3503fb78cc4f363a181998b0c16319066c5c29d48f9c"
+      }
+    ]
+  },
+  {
+    "tag": "v1.11.9",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "fc354e74a32237d71d7619cd7b506ae9010db37c6779d3a4e5c4c3154e18ec45"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 357956,
+        "img_size": 356848,
+        "encrypted": true,
+        "plaintext_sha256": "83100f7b0f58c2abb53ba24378c3ef963e61e2abad2b43df2eecb9ed85e6949a",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "0f616a64c631d605586cdb44983dbf89ecd759d0769a707db7b30d95d1b3955f"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 243812,
+        "img_size": 242704,
+        "encrypted": true,
+        "plaintext_sha256": "ec1bbca40c74f91cddb0e1904708363f1199a88f5f6bca555fa15d7e7af13843",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "4d9899ed6b1bc07bf0b52b5cd8427c80fb100fe81c3ef02c28e6bf01769f9b3e"
+      }
+    ]
+  },
+  {
+    "tag": "v1.11.10",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "fc354e74a32237d71d7619cd7b506ae9010db37c6779d3a4e5c4c3154e18ec45"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 359124,
+        "img_size": 358016,
+        "encrypted": true,
+        "plaintext_sha256": "e3a7afc4e765c631d35aeae4133e611ca529502a6c3cea7e6417f2053e79d76c",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "6ba340b81744eae4b68ac58b13daee4abf7782c96e036445abfd725dbfdf443e"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 244420,
+        "img_size": 243312,
+        "encrypted": true,
+        "plaintext_sha256": "93b050dcf560fa43bce8bb172c252ba4ea1b761aefc425b86c7a362ef4a88c53",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "b3a7b61dd2c31a9b927d3503fb78cc4f363a181998b0c16319066c5c29d48f9c"
+      }
+    ]
+  },
+  {
+    "tag": "v1.11.11",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "fc354e74a32237d71d7619cd7b506ae9010db37c6779d3a4e5c4c3154e18ec45"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 359604,
+        "img_size": 358496,
+        "encrypted": true,
+        "plaintext_sha256": "735878524ad86f7b27e4fd46ecfd90275ce65610c634ea9a0be68882434f6646",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "c54abbdf2229a7a6552f2812608dc40e8aeffc8692d8a0a95a54a4b8a2d149f7"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 244948,
+        "img_size": 243840,
+        "encrypted": true,
+        "plaintext_sha256": "e1577ee8be94501f162e4cd094f5bf43c5cade184064de059ba48f1aa8e41a7d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "0b020bccd90dfe39589475e277e2df091a9e92a21da6d2710516fb5636e2c3d5"
+      }
+    ]
+  },
+  {
+    "tag": "v1.14.3",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "5d4b036f516dfdc2af559e5eba5d55f7264be96f95e1ed78cf524c593bff8549"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 360308,
+        "img_size": 359200,
+        "encrypted": true,
+        "plaintext_sha256": "8c926ca7a710cbebfdb09b29a7320e848091521f8cce36d03e469f02b271898a",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "099651b8b6950e243ced709f6edd38127413b3ea5f99f0bf483d77d6500bfe61"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 245332,
+        "img_size": 244224,
+        "encrypted": true,
+        "plaintext_sha256": "baa94b1d062ac624b68c60025cfc9908b1533f63c345b883801a5773fd11abac",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "430d70204339e43ffc13ec2884b5f9f7cd17fbb8a0561960a900a54829aba62b"
+      }
+    ]
+  },
+  {
+    "tag": "v1.14.5",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "d893f6fda573e971de4066b90bfd9c913bd37ef0f4df1b6b654c821452e8bdc2"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 360420,
+        "img_size": 359312,
+        "encrypted": true,
+        "plaintext_sha256": "f52aec47c312efb8aa34c373ab313b0331601b12a4ef526ab53684444726fab1",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "848e1f1efbfe9fb82d3e5772edfb0ad3cbc093a95fb58b64fbeafb7eb9db0056"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 245332,
+        "img_size": 244224,
+        "encrypted": true,
+        "plaintext_sha256": "fee82f0e07bc7a54f81701de4b703a4d595a8cd4b10937463be76dbfb28c5c5a",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "dd0818ac000b82bb12f7be67359f3c8b0d26edf7def41ae2beb564ac15b8817e"
+      }
+    ]
+  },
+  {
+    "tag": "v1.15.0",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "51d9d08e656b1a2ffb48b9848f7934233831710e1eb3a20af73cd890a84235bf"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 362740,
+        "img_size": 361632,
+        "encrypted": true,
+        "plaintext_sha256": "99e6f8b23b16b6a473698b9b95a9d476529756e58aaac40b331522ec321fe5ad",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "592892d794fbde750f2f1e3a59cdd37fc70aba588d97ffac9c1ad8a7d8ecb50e"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 245444,
+        "img_size": 244336,
+        "encrypted": true,
+        "plaintext_sha256": "ce0f1317a096fa2f21b7f121bc2405363299baabb9e1666756fcb0624fa90675",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "8f7540d383d87a3979a87f17d672229f89d957844c5bcf8b5d0624d3588f1a2b"
+      }
+    ],
+    "linux_variant": {
+      "note": "Linux build embedded DIFFERENT firmware than win/mac",
+      "files": [
+        {
+          "name": "kb_fwl.bin",
+          "category": "keyboard",
+          "img_size": 359312,
+          "plaintext_sha256": "f52aec47c312efb8aa34c373ab313b0331601b12a4ef526ab53684444726fab1",
+          "resource_sha256": "848e1f1efbfe9fb82d3e5772edfb0ad3cbc093a95fb58b64fbeafb7eb9db0056"
+        },
+        {
+          "name": "kb_fwr.bin",
+          "category": "keyboard",
+          "img_size": 244224,
+          "plaintext_sha256": "fee82f0e07bc7a54f81701de4b703a4d595a8cd4b10937463be76dbfb28c5c5a",
+          "resource_sha256": "dd0818ac000b82bb12f7be67359f3c8b0d26edf7def41ae2beb564ac15b8817e"
+        },
+        {
+          "name": "FlashMemory.bin",
+          "category": "module",
+          "img_size": null,
+          "plaintext_sha256": null,
+          "resource_sha256": "d893f6fda573e971de4066b90bfd9c913bd37ef0f4df1b6b654c821452e8bdc2"
+        }
+      ]
+    }
+  },
+  {
+    "tag": "v1.15.1",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "51d9d08e656b1a2ffb48b9848f7934233831710e1eb3a20af73cd890a84235bf"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 362740,
+        "img_size": 361632,
+        "encrypted": true,
+        "plaintext_sha256": "99e6f8b23b16b6a473698b9b95a9d476529756e58aaac40b331522ec321fe5ad",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "592892d794fbde750f2f1e3a59cdd37fc70aba588d97ffac9c1ad8a7d8ecb50e"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 245444,
+        "img_size": 244336,
+        "encrypted": true,
+        "plaintext_sha256": "ce0f1317a096fa2f21b7f121bc2405363299baabb9e1666756fcb0624fa90675",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "8f7540d383d87a3979a87f17d672229f89d957844c5bcf8b5d0624d3588f1a2b"
+      }
+    ],
+    "linux_variant": {
+      "note": "Linux build embedded DIFFERENT firmware than win/mac",
+      "files": [
+        {
+          "name": "kb_fwl.bin",
+          "category": "keyboard",
+          "img_size": 359312,
+          "plaintext_sha256": "f52aec47c312efb8aa34c373ab313b0331601b12a4ef526ab53684444726fab1",
+          "resource_sha256": "848e1f1efbfe9fb82d3e5772edfb0ad3cbc093a95fb58b64fbeafb7eb9db0056"
+        },
+        {
+          "name": "kb_fwr.bin",
+          "category": "keyboard",
+          "img_size": 244224,
+          "plaintext_sha256": "fee82f0e07bc7a54f81701de4b703a4d595a8cd4b10937463be76dbfb28c5c5a",
+          "resource_sha256": "dd0818ac000b82bb12f7be67359f3c8b0d26edf7def41ae2beb564ac15b8817e"
+        },
+        {
+          "name": "FlashMemory.bin",
+          "category": "module",
+          "img_size": null,
+          "plaintext_sha256": null,
+          "resource_sha256": "d893f6fda573e971de4066b90bfd9c913bd37ef0f4df1b6b654c821452e8bdc2"
+        }
+      ]
+    }
+  },
+  {
+    "tag": "v1.17.2",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 305556,
+        "img_size": 304448,
+        "encrypted": true,
+        "plaintext_sha256": "1b259d25983bb6db0fba53d191e3dae736ae94dbd1b5b1a0fbee036e09524246",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "70dd185f0cc8fdf5ea511fcb2f546211645484c1cf6d095c11c484a9d664499d"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 219172,
+        "img_size": 218064,
+        "encrypted": true,
+        "plaintext_sha256": "90f98e4d8320b86cb2d122cefaff5c0f22f6b05433ba0939c12685e88ed6ef8a",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "4dfe7feb35d6f5711687cd9e9974140d657afe52197dd8814dde017cc46a8f8c"
+      }
+    ],
+    "linux_variant": {
+      "note": "Linux build embedded DIFFERENT firmware than win/mac",
+      "files": [
+        {
+          "name": "kb_fwl.bin",
+          "category": "keyboard",
+          "img_size": 359312,
+          "plaintext_sha256": "f52aec47c312efb8aa34c373ab313b0331601b12a4ef526ab53684444726fab1",
+          "resource_sha256": "848e1f1efbfe9fb82d3e5772edfb0ad3cbc093a95fb58b64fbeafb7eb9db0056"
+        },
+        {
+          "name": "kb_fwr.bin",
+          "category": "keyboard",
+          "img_size": 244224,
+          "plaintext_sha256": "fee82f0e07bc7a54f81701de4b703a4d595a8cd4b10937463be76dbfb28c5c5a",
+          "resource_sha256": "dd0818ac000b82bb12f7be67359f3c8b0d26edf7def41ae2beb564ac15b8817e"
+        },
+        {
+          "name": "FlashMemory.bin",
+          "category": "module",
+          "img_size": null,
+          "plaintext_sha256": null,
+          "resource_sha256": "d893f6fda573e971de4066b90bfd9c913bd37ef0f4df1b6b654c821452e8bdc2"
+        }
+      ]
+    }
+  },
+  {
+    "tag": "v1.17.3",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 305556,
+        "img_size": 304448,
+        "encrypted": true,
+        "plaintext_sha256": "1b259d25983bb6db0fba53d191e3dae736ae94dbd1b5b1a0fbee036e09524246",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "70dd185f0cc8fdf5ea511fcb2f546211645484c1cf6d095c11c484a9d664499d"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 219172,
+        "img_size": 218064,
+        "encrypted": true,
+        "plaintext_sha256": "90f98e4d8320b86cb2d122cefaff5c0f22f6b05433ba0939c12685e88ed6ef8a",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "4dfe7feb35d6f5711687cd9e9974140d657afe52197dd8814dde017cc46a8f8c"
+      }
+    ],
+    "linux_variant": {
+      "note": "Linux build embedded DIFFERENT firmware than win/mac",
+      "files": [
+        {
+          "name": "kb_fwl.bin",
+          "category": "keyboard",
+          "img_size": 359312,
+          "plaintext_sha256": "f52aec47c312efb8aa34c373ab313b0331601b12a4ef526ab53684444726fab1",
+          "resource_sha256": "848e1f1efbfe9fb82d3e5772edfb0ad3cbc093a95fb58b64fbeafb7eb9db0056"
+        },
+        {
+          "name": "kb_fwr.bin",
+          "category": "keyboard",
+          "img_size": 244224,
+          "plaintext_sha256": "fee82f0e07bc7a54f81701de4b703a4d595a8cd4b10937463be76dbfb28c5c5a",
+          "resource_sha256": "dd0818ac000b82bb12f7be67359f3c8b0d26edf7def41ae2beb564ac15b8817e"
+        },
+        {
+          "name": "FlashMemory.bin",
+          "category": "module",
+          "img_size": null,
+          "plaintext_sha256": null,
+          "resource_sha256": "d893f6fda573e971de4066b90bfd9c913bd37ef0f4df1b6b654c821452e8bdc2"
+        }
+      ]
+    }
+  },
+  {
+    "tag": "v1.19.1",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 313380,
+        "img_size": 312272,
+        "encrypted": true,
+        "plaintext_sha256": "036059b2ecbd89265bc0dfc9030ccf3c2332d555aed7bf91cfa146d22e8c5979",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a126f4f6dd0f45bd0572e4f107a22bd4697850ef2b548d3ff76e662bbe91651c"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 221796,
+        "img_size": 220688,
+        "encrypted": true,
+        "plaintext_sha256": "959fbae1d8359ebee2f23f483f6a49feb3f9e3dd85238637ee4bb7abe3e61a1d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a21e28c914e60ad171c962c292083ffa29ff454478720a008a7b927a1d8a314e"
+      }
+    ]
+  },
+  {
+    "tag": "v1.20.0",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 313380,
+        "img_size": 312272,
+        "encrypted": true,
+        "plaintext_sha256": "036059b2ecbd89265bc0dfc9030ccf3c2332d555aed7bf91cfa146d22e8c5979",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a126f4f6dd0f45bd0572e4f107a22bd4697850ef2b548d3ff76e662bbe91651c"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 221796,
+        "img_size": 220688,
+        "encrypted": true,
+        "plaintext_sha256": "959fbae1d8359ebee2f23f483f6a49feb3f9e3dd85238637ee4bb7abe3e61a1d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a21e28c914e60ad171c962c292083ffa29ff454478720a008a7b927a1d8a314e"
+      }
+    ]
+  },
+  {
+    "tag": "v1.21.0",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 313380,
+        "img_size": 312272,
+        "encrypted": true,
+        "plaintext_sha256": "036059b2ecbd89265bc0dfc9030ccf3c2332d555aed7bf91cfa146d22e8c5979",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a126f4f6dd0f45bd0572e4f107a22bd4697850ef2b548d3ff76e662bbe91651c"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 221796,
+        "img_size": 220688,
+        "encrypted": true,
+        "plaintext_sha256": "959fbae1d8359ebee2f23f483f6a49feb3f9e3dd85238637ee4bb7abe3e61a1d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a21e28c914e60ad171c962c292083ffa29ff454478720a008a7b927a1d8a314e"
+      }
+    ]
+  },
+  {
+    "tag": "v1.25.0",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwl_64.bin",
+      "kb_fwr.bin",
+      "kb_fwr_64.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "97d94e9e3d8bfc87b6ee99d01a368c699cdf7fa3d582e7241b1100a4e06dec5a"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 329988,
+        "img_size": 328880,
+        "encrypted": true,
+        "plaintext_sha256": "479e89ba6c92ead9c46d1228d5033437caf63d72db89364081b9b0a321b31283",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "3d3e544ece9d986a0e6cae41879cade1749272cb8fac39b6f8adc10edff111e0"
+      },
+      {
+        "name": "kb_fwl_64.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "B",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 329988,
+        "img_size": 328880,
+        "encrypted": true,
+        "plaintext_sha256": "07dd2523bf87ee1385fdfb4dbaacd57c8f928e3751306a3e63eac748b2454297",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "afa7642bcf6cbc210917d275d4394f653dcb754dfd1e57f1cb4caa184992dba4"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 227108,
+        "img_size": 226000,
+        "encrypted": true,
+        "plaintext_sha256": "2abb2695b9b6e94883553e101ea5edb8e1934e3919d62b14e589331fe9f5bcfc",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a4c137eb4d8b55f3cd1282b1752b8eb45d00c1180189aee531a6e990a407acbf"
+      },
+      {
+        "name": "kb_fwr_64.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "B",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 227108,
+        "img_size": 226000,
+        "encrypted": true,
+        "plaintext_sha256": "87f63fd3be514538f099803c0912516a54bbb256facf2c50df6c0c85c16a6677",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f12eb1ca630f6b0d1356383530f422462dbe650ce6c06e4d2f288ef3390a4131"
+      }
+    ]
+  },
+  {
+    "tag": "v1.25.1",
+    "source_platform": "mac",
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwl_64.bin",
+      "kb_fwr.bin",
+      "kb_fwr_64.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "97d94e9e3d8bfc87b6ee99d01a368c699cdf7fa3d582e7241b1100a4e06dec5a"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 329988,
+        "img_size": 328880,
+        "encrypted": true,
+        "plaintext_sha256": "479e89ba6c92ead9c46d1228d5033437caf63d72db89364081b9b0a321b31283",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "3d3e544ece9d986a0e6cae41879cade1749272cb8fac39b6f8adc10edff111e0"
+      },
+      {
+        "name": "kb_fwl_64.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "B",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 329988,
+        "img_size": 328880,
+        "encrypted": true,
+        "plaintext_sha256": "07dd2523bf87ee1385fdfb4dbaacd57c8f928e3751306a3e63eac748b2454297",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "afa7642bcf6cbc210917d275d4394f653dcb754dfd1e57f1cb4caa184992dba4"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 227108,
+        "img_size": 226000,
+        "encrypted": true,
+        "plaintext_sha256": "2abb2695b9b6e94883553e101ea5edb8e1934e3919d62b14e589331fe9f5bcfc",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a4c137eb4d8b55f3cd1282b1752b8eb45d00c1180189aee531a6e990a407acbf"
+      },
+      {
+        "name": "kb_fwr_64.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "B",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 227108,
+        "img_size": 226000,
+        "encrypted": true,
+        "plaintext_sha256": "87f63fd3be514538f099803c0912516a54bbb256facf2c50df6c0c85c16a6677",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f12eb1ca630f6b0d1356383530f422462dbe650ce6c06e4d2f288ef3390a4131"
+      }
+    ]
+  }
+]

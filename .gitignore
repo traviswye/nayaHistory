@@ -9,5 +9,5 @@ releases/
 # keep the small update-metadata yml files (they're text, tiny, and useful)
 !releases/**/*.yml
 
-# Extracted vendor firmware images: kept on disk, catalogued in FIRMWARE-HISTORY.md, never committed.
-firmware-history/
+# firmware-history/ (carved Create/module firmware images + per-version manifests) IS committed:
+# this is a private preservation repo. Only the large installer mirror under releases/ stays out.

@@ -1,0 +1,79 @@
+{
+  "tag": "v1.15.1",
+  "source_platform": "mac",
+  "firmware_names": [
+    "FlashMemory.bin",
+    "kb_fwl.bin",
+    "kb_fwr.bin"
+  ],
+  "files": [
+    {
+      "name": "FlashMemory.bin",
+      "category": "module",
+      "side": "",
+      "flash_gen": "",
+      "resource_len": 1048576,
+      "type": "other",
+      "mcuboot_image_len": null,
+      "img_size": null,
+      "encrypted": false,
+      "plaintext_sha256": null,
+      "keyhash": null,
+      "resource_sha256": "51d9d08e656b1a2ffb48b9848f7934233831710e1eb3a20af73cd890a84235bf"
+    },
+    {
+      "name": "kb_fwl.bin",
+      "category": "keyboard",
+      "side": "left",
+      "flash_gen": "A",
+      "resource_len": 663552,
+      "type": "mcuboot",
+      "mcuboot_image_len": 362740,
+      "img_size": 361632,
+      "encrypted": true,
+      "plaintext_sha256": "99e6f8b23b16b6a473698b9b95a9d476529756e58aaac40b331522ec321fe5ad",
+      "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+      "resource_sha256": "592892d794fbde750f2f1e3a59cdd37fc70aba588d97ffac9c1ad8a7d8ecb50e"
+    },
+    {
+      "name": "kb_fwr.bin",
+      "category": "keyboard",
+      "side": "right",
+      "flash_gen": "A",
+      "resource_len": 663552,
+      "type": "mcuboot",
+      "mcuboot_image_len": 245444,
+      "img_size": 244336,
+      "encrypted": true,
+      "plaintext_sha256": "ce0f1317a096fa2f21b7f121bc2405363299baabb9e1666756fcb0624fa90675",
+      "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+      "resource_sha256": "8f7540d383d87a3979a87f17d672229f89d957844c5bcf8b5d0624d3588f1a2b"
+    }
+  ],
+  "linux_variant": {
+    "note": "Linux build embedded DIFFERENT firmware than win/mac",
+    "files": [
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "img_size": 359312,
+        "plaintext_sha256": "f52aec47c312efb8aa34c373ab313b0331601b12a4ef526ab53684444726fab1",
+        "resource_sha256": "848e1f1efbfe9fb82d3e5772edfb0ad3cbc093a95fb58b64fbeafb7eb9db0056"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "img_size": 244224,
+        "plaintext_sha256": "fee82f0e07bc7a54f81701de4b703a4d595a8cd4b10937463be76dbfb28c5c5a",
+        "resource_sha256": "dd0818ac000b82bb12f7be67359f3c8b0d26edf7def41ae2beb564ac15b8817e"
+      },
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "img_size": null,
+        "plaintext_sha256": null,
+        "resource_sha256": "d893f6fda573e971de4066b90bfd9c913bd37ef0f4df1b6b654c821452e8bdc2"
+      }
+    ]
+  }
+}

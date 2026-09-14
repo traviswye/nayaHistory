@@ -215,4 +215,4 @@ v0.1.0 / v0.1.1  (identical)
 (For comparison, v1.25.1 keyboard plaintext hashes are `479e89ba…` left / `2abb2695…` right gen-A and
 `07dd2523…` / `87f63fd3…` gen-B — see `firmware-analysis.md`.)
 
-_No vendor binaries or key material are stored in this repo — findings only._
+_Firmware images are archived under `firmware-history/`; no key material is stored anywhere in this repo (none was found)._

@@ -17,7 +17,7 @@ firmware-history/<version>/
     linux-variant/                   only where the Linux build shipped DIFFERENT images
 ```
 
-The `firmware-history/` tree is git-ignored (vendor binaries stay out of git); this catalogue
+The `firmware-history/` tree (images + per-version `manifest.json`) is committed to this private repo; this catalogue
 is the tracked record. Regenerate with `python D:/NayaOS/extracted/early/_tools/extract_history.py`.
 
 ## What these images are (read before flashing)

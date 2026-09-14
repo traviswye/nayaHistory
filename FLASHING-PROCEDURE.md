@@ -213,4 +213,4 @@ python D:\NayaOS\extracted\early\_tools\flash_map.py v1.25.1 \
 
 Reports for all 25: `D:\NayaOS\extracted\early\_run_flash\<tag>.json`.
 
-_Analysis notes only — no vendor binaries or keys are stored in this repo._
+_Firmware images are archived under `firmware-history/`; no keys are stored anywhere in this repo (none was found)._
