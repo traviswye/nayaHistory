@@ -189,6 +189,28 @@ The 2026-09-01 note above that recovery "self-recovers on timeout" did not hold 
 half stayed in MCUboot for well over a minute after an app-requested reset until an SMP `os reset`
 was sent. Plan for the explicit reset (or a power cycle), not the timeout.
 
+## Product ids, vendor-exact (2026-09-16)
+
+`Naya_Device::setCreateFlashGenerationFromPid(uint16 pid)` (x86_64 `0x10017e600`, arm64 `0x10014d710`,
+identical logic) is the whole PID table. It masks the pid with `0xEFFF`, accepts exactly two families
+of three (a bitmask `0x400801` over `pid - 0x64` and `pid - 0xC8`, i.e. offsets 0, 11, 22), and reads
+bit `0x1000` as the flash generation:
+
+| `pid & 0xEFFF` | half | mode |
+|---|---|---|
+| `0x064` | left | application |
+| `0x06F` | left | MCUboot recovery |
+| `0x07A` | left | DFU |
+| `0x0C8` | right | application |
+| `0x0D3` | right | MCUboot recovery |
+| `0x0DE` | right | DFU |
+
+`pid & 0x1000` clear = **generation A**, set = **generation B** (so gen-B halves are `0x1064` /
+`0x10C8`, and in recovery `0x106F` / `0x10D3`). A stored generation that disagrees with the pid is
+logged as a mismatch. Confirmed on hardware: `0x0064`, `0x00C8`, `0x006F`. The dongle (`0x012C`) is
+outside this table. The "read the real VID/PIDs off a live device" item above is therefore closed:
+this is the table the binary compares against.
+
 ## What OpenFlow needs to do
 
 1. **Use a standard SMP/mcumgr client** over serial at **1,000,000 baud**, CBOR payloads. No custom
