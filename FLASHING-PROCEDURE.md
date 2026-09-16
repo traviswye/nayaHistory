@@ -150,6 +150,45 @@ reset on the device.
 
 ---
 
+## Slot ids, vendor-exact (2026-09-16)
+
+How NayaCore addresses an upload was recovered two ways that agree, and neither is an inference.
+
+**From the device.** A production Create (left half, FW 3.41.0, gen A) rebooted into MCUboot answers
+the `image slot info` read (image group, id 6):
+
+| image | slot | size | upload_image_id |
+|---|---|---|---|
+| 0 | 0 (primary) | 663552 | 1 |
+| 0 | 1 (secondary) | 663552 | 2 |
+
+Only image 0 is listed, so the bootloader is a single-image swap build with
+`MCUBOOT_SERIAL_DIRECT_IMAGE_UPLOAD` on: the `image` field of an upload is a **direct slot id**
+(0/1 = primary, 2 = secondary, 3 = slot2_partition, 4 = slot3_partition), not the application-side
+mcumgr image index. 663552 bytes is exactly the padded size of every keyboard image resource.
+
+**From NayaCore 6.11.0** (both macOS builds, symbols intact; the wrappers are two instructions each):
+
+| function | is | address (x86_64 / arm64) |
+|---|---|---|
+| `MCUBootWorker::uploadImageToCreateSlot(path)` | `uploadImageToSlot(path, 2)` | `0x100115d50` / `0x1000f3d14` |
+| `MCUBootWorker::uploadImageToModulesSlot(path)` | `uploadImageToSlot(path, 4)` | `0x10011a140` / `0x1000f7938` |
+
+The request keys sit together in the binary as `image`, `off`, `len`, `sha`, `data`, beside the
+SMP console markers `06 09` / `04 14` and `sendFramedCommand`, with `hash`, `confirm` (the image
+state write) next to them: stock mcumgr, exactly as documented above.
+
+So: **keyboard image -> `image: 2`** (the secondary slot, then mark pending + reset, MCUboot swaps and
+decrypts), **module bundle -> `image: 4`** (slot3_partition, the 1 MiB `M_Firmware` LittleFS partition;
+no mark-pending, a reset is enough, and the app reports the stored bundle version afterwards via
+`MODULE_FILE_FW_VERSION` 0xDE/0x100A, which only the LEFT half answers). The modules slot never
+appears in the slot map because it is not an MCUboot image slot; the vendor constant is the only
+source for it, and it should be used only on a bootloader whose map numbers the secondary slot 2.
+
+The 2026-09-01 note above that recovery "self-recovers on timeout" did not hold on 2026-09-16: the
+half stayed in MCUboot for well over a minute after an app-requested reset until an SMP `os reset`
+was sent. Plan for the explicit reset (or a power cycle), not the timeout.
+
 ## What OpenFlow needs to do
 
 1. **Use a standard SMP/mcumgr client** over serial at **1,000,000 baud**, CBOR payloads. No custom
