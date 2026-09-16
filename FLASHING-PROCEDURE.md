@@ -189,6 +189,34 @@ The 2026-09-01 note above that recovery "self-recovers on timeout" did not hold 
 half stayed in MCUboot for well over a minute after an app-requested reset until an SMP `os reset`
 was sent. Plan for the explicit reset (or a power cycle), not the timeout.
 
+## The resource is a whole slot, trailer included (review of 2026-09-16)
+
+Every keyboard image resource (and the dial's `d_fw.bin`) is the full slot: MCUboot header + image +
+TLVs (`mcuboot_image_len`), `0xFF` up to 24 bytes from the end, then an MCUboot **swap trailer already
+written**: `image_ok = 0x01` at `-24` and `BOOT_MAGIC` (`77 c2 95 f3 60 d2 ef 7f 35 52 50 0f 2c b6 79 80`)
+in the last 16 bytes; `copy_done` and `swap_info` unset. Identical in all 25 releases.
+
+What that means on the wire (MCUboot `boot_serial.c` / `bootutil_public.c`, read 2026-09-16):
+
+- `image upload` writes the bytes verbatim after erasing the slot; `bs_upload` does not parse `sha`
+  and allows `len` equal to the slot size (663552 into a 663552-byte slot).
+- With that trailer in the SECONDARY slot, MCUboot's swap table (secondary magic good + image_ok set)
+  schedules a **PERMANENT** swap the moment the last chunk lands. NayaCore then simply resets
+  (`MCUBootWorker::restartDevice`, os reset); its `testImage` / `confirmImage` methods exist but
+  `doStart` calls only `uploadImageToCreateSlot`.
+- An `image state` write afterwards changes nothing: `boot_set_pending_multi` returns 0 when the
+  trailer magic is already good. And an `image state` write **without a hash is not "confirm the running
+  image"** in serial recovery (that is the application-side mcumgr meaning); `bs_set` calls
+  `boot_set_pending_multi(0, confirm)`, i.e. it schedules a swap of the secondary.
+- Chunking: NayaCore sends `min(remaining, 512)` bytes per frame (`uploadImageToSlot`,
+  x86_64 `0x100115e95`).
+
+Consequence for a flasher that wants to check before it arms: upload only the MCUboot image
+(`mcuboot_image_len` bytes), leave the trailer area erased, verify the slot's hash, then write the
+trailer through `image state` with the hash (`confirm` false = TEST swap, boots once and reverts unless
+the application confirms itself; true = PERMANENT). OpenFlow does that by default and offers the
+vendor's whole-resource upload as an explicit alternative.
+
 ## Product ids, vendor-exact (2026-09-16)
 
 `Naya_Device::setCreateFlashGenerationFromPid(uint16 pid)` (x86_64 `0x10017e600`, arm64 `0x10014d710`,
