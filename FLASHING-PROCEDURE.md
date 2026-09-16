@@ -296,10 +296,9 @@ v1.11.0–v1.15.1 is confirmed native-SMP from the macOS binary symbols (`…ERK
 
 ```
 # per-version flashing map (JSON), no binaries committed
-python D:\NayaOS\extracted\early\_tools\flash_map.py v1.25.1 \
-    D:\nayaHistory\releases\v1.25.1\NayaFlow-1.25.1-mac.zip
+python tools/flash_map.py v1.25.1 releases/v1.25.1/NayaFlow-1.25.1-mac.zip   # from the repo root
 ```
 
-Reports for all 25: `D:\NayaOS\extracted\early\_run_flash\<tag>.json`.
+The per-tag reports are not committed; regenerate any of the 25 with the command above (`tools/flash_map.py` moved here from the NayaOS working tree on 2026-09-16).
 
 _Firmware images are archived under `firmware-history/`; no keys are stored anywhere in this repo (none was found)._

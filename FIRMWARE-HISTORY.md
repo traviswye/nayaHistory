@@ -18,7 +18,7 @@ firmware-history/<version>/
 ```
 
 The `firmware-history/` tree (images + per-version `manifest.json`) is committed to this private repo; this catalogue
-is the tracked record. Regenerate with `python D:/NayaOS/extracted/early/_tools/extract_history.py`.
+is the tracked record. Regenerate with `python tools/extract_history.py` from the repo root (it reads `releases/` and writes `firmware-history/`; `tools/carve_fw.py` is its helper).
 
 ## What these images are (read before flashing)
 

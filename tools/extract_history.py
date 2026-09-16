@@ -2,8 +2,10 @@ import os, re, sys, json, struct, zipfile, hashlib
 sys.path.insert(0, r"D:\NayaOS\extracted\early\_tools")
 import carve_fw
 
-RELEASES = r"D:\nayaHistory\releases"
-OUT = r"D:\nayaHistory\firmware-history"
+# Paths are relative to this repo (the parent of tools/), so a clone works anywhere.
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RELEASES = os.path.join(_ROOT, "releases")
+OUT = os.path.join(_ROOT, "firmware-history")
 NAMES = ('NayaCore.exe','NayaCore','naya_core_project.exe','naya_core_project',
          'naya_core_fw_service.exe','naya_core_fw_service')
 KB = carve_fw.KB_NAMES
