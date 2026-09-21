@@ -17,7 +17,8 @@ firmware-history/<version>/
     linux-variant/                   only where the Linux build shipped DIFFERENT images
 ```
 
-The `firmware-history/` tree (images + per-version `manifest.json`) is committed to this private repo; this catalogue
+The `firmware-history/` tree (images + per-version `manifest.json`) is committed to this repo, which is public as of
+2026-09-21 and is the library OpenFlow downloads firmware from (see the README); this catalogue
 is the tracked record. Regenerate with `python tools/extract_history.py` from the repo root (it reads `releases/` and writes `firmware-history/`; `tools/carve_fw.py` is its helper).
 
 ## What these images are (read before flashing)
