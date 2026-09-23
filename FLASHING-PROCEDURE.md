@@ -113,8 +113,11 @@ not need it — it can drive the device directly.
 | v1.14.3 – v1.17.3 | `NayaCore(.exe)` | inside `app.asar` |
 | v1.19.1 – v1.25.1 | `NayaCore` | outside the asar, in `NayaFlow.app/Contents/core/NayaCore.app/` |
 
-A **Linux** NayaCore first appears at v1.17.3 (`naya-core/linux/NayaCore/bin/NayaCore`); releases before
-that have no Linux firmware service (`_getNayaCoreLinuxExePath()` returns `""`).
+A **Linux** NayaCore is present in v1.15.0, v1.15.1, v1.17.2 and v1.17.3 (in 1.17.3 at
+`naya-core/linux/NayaCore/bin/NayaCore`), and it embeds the older 1.14.5 images (keyboard 3.28.7, module
+2.1.2) while the Windows and macOS builds of the same releases carry newer ones (see the `linux-variant/`
+rows in `FIRMWARE-HISTORY.md`). The earliest releases (0.0.1 to 1.3.11) have no Linux firmware service
+(`_getNayaCoreLinuxExePath()` returns `""`).
 
 ---
 
@@ -180,8 +183,8 @@ The request keys sit together in the binary as `image`, `off`, `len`, `sha`, `da
 SMP console markers `06 09` / `04 14` and `sendFramedCommand`, with `hash`, `confirm` (the image
 state write) next to them: stock mcumgr, exactly as documented above.
 
-So: **keyboard image -> `image: 2`** (the secondary slot, then mark pending + reset, MCUboot swaps and
-decrypts), **module bundle -> `image: 4`** (slot3_partition, the 1 MiB `M_Firmware` LittleFS partition;
+So: **keyboard image -> `image: 2`** (the secondary slot; the whole resource carries its own
+permanent-swap trailer, so a reset is all that follows, and MCUboot swaps and decrypts), **module bundle -> `image: 4`** (slot3_partition, the 1 MiB `M_Firmware` LittleFS partition;
 no mark-pending, a reset is enough, and the app reports the stored bundle version afterwards via
 `MODULE_FILE_FW_VERSION` 0xDE/0x100A, which only the LEFT half answers). The modules slot never
 appears in the slot map because it is not an MCUboot image slot; the vendor constant is the only
