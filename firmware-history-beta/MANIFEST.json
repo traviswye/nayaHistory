@@ -1,0 +1,2468 @@
+[
+  {
+    "tag": "v1.10.0",
+    "channel": "beta",
+    "published_at": "2025-09-01T18:47:22Z",
+    "prerelease": false,
+    "app_version": "1.10.0",
+    "source_asset": "NayaFlow-Beta-1.10.0-arm64-mac.zip",
+    "source_asset_sha256": "1139e1a109774f4b3b83e1b1d28648907dd99f4b483f5733819b89d5caa5cf52",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.2.0.0",
+      "0.3.4.6",
+      "0.3.8.9"
+    ],
+    "firmware_names": [],
+    "note": "No firmware in this release: its NayaCore embeds no Qt firmware resources and no MCUboot image, so there is nothing to carve.",
+    "files": []
+  },
+  {
+    "tag": "v1.16.0",
+    "channel": "beta",
+    "published_at": "2026-02-03T12:05:24Z",
+    "prerelease": false,
+    "app_version": "1.16.0",
+    "source_asset": "NayaFlow-Beta-1.16.0-arm64-mac.zip",
+    "source_asset_sha256": "168e7362858a60e049f31af419d43e7e3302c1d39548cc5564420131bcfef456",
+    "source_platform": "mac",
+    "note_declares": {
+      "create": "3.31.1",
+      "modules": "2.3.2"
+    },
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.2.0",
+      "0.3.29.1"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "51d9d08e656b1a2ffb48b9848f7934233831710e1eb3a20af73cd890a84235bf",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.2.0",
+          "lfs": "2.1",
+          "apps": {
+            "Float_UserApp.sfb": "b59da5ba185be7aabe706ed3694cf5f78b9ceb7bc88a3a5835e079c7b5529ff2",
+            "Query_UserApp.sfb": "651d1226017d1db9e600a07742157fe968e0f07a8aeca1b5fef349c570c93312",
+            "Touch_UserApp.sfb": "7cc8f33db04832ae4f6a22fc082915e50afafb30db7416130debe687533c51ca",
+            "Track_UserApp.sfb": "f9da852d10a1db2694ed2f250ae2a380330871a48c94582b313a71a20f5aa9d1",
+            "Tune_UserApp.sfb": "67bb9b17b213c78ae0911a004151fc9bb7946e336073d0e76cfac7b69f65e805"
+          }
+        },
+        "firmware_version": "2.2.0",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.2.0",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.2.0",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          },
+          {
+            "version": "2.3.2",
+            "source": "beta note v1.16.0 (NayaModules heading)"
+          }
+        ],
+        "firmware_version_conflict": true,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.15.0/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 362740,
+        "img_size": 361632,
+        "encrypted": true,
+        "plaintext_sha256": "99e6f8b23b16b6a473698b9b95a9d476529756e58aaac40b331522ec321fe5ad",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "592892d794fbde750f2f1e3a59cdd37fc70aba588d97ffac9c1ad8a7d8ecb50e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.29.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.15.1/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.29.1",
+            "source": "same plaintext as firmware-history/v1.15.1/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.29.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.31.1",
+            "source": "beta note v1.16.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": true,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.15.0/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 245444,
+        "img_size": 244336,
+        "encrypted": true,
+        "plaintext_sha256": "ce0f1317a096fa2f21b7f121bc2405363299baabb9e1666756fcb0624fa90675",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "8f7540d383d87a3979a87f17d672229f89d957844c5bcf8b5d0624d3588f1a2b",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.29.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.15.1/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.29.1",
+            "source": "same plaintext as firmware-history/v1.15.1/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.29.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.31.1",
+            "source": "beta note v1.16.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": true,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.15.0/kb_fwr.bin"
+      }
+    ]
+  },
+  {
+    "tag": "v1.16.1",
+    "channel": "beta",
+    "published_at": "2026-02-03T17:04:01Z",
+    "prerelease": false,
+    "app_version": "1.16.1",
+    "source_asset": "NayaFlow-Beta-1.16.1-arm64-mac.zip",
+    "source_asset_sha256": "0acdb2dfbf6ce58ce1d1eaa1a895d1e9a2e1d64d4b5229b1040193ab7b55885f",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.2.0",
+      "0.3.29.1"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "51d9d08e656b1a2ffb48b9848f7934233831710e1eb3a20af73cd890a84235bf",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.2.0",
+          "lfs": "2.1",
+          "apps": {
+            "Float_UserApp.sfb": "b59da5ba185be7aabe706ed3694cf5f78b9ceb7bc88a3a5835e079c7b5529ff2",
+            "Query_UserApp.sfb": "651d1226017d1db9e600a07742157fe968e0f07a8aeca1b5fef349c570c93312",
+            "Touch_UserApp.sfb": "7cc8f33db04832ae4f6a22fc082915e50afafb30db7416130debe687533c51ca",
+            "Track_UserApp.sfb": "f9da852d10a1db2694ed2f250ae2a380330871a48c94582b313a71a20f5aa9d1",
+            "Tune_UserApp.sfb": "67bb9b17b213c78ae0911a004151fc9bb7946e336073d0e76cfac7b69f65e805"
+          }
+        },
+        "firmware_version": "2.2.0",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.2.0",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.2.0",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.15.0/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 362740,
+        "img_size": 361632,
+        "encrypted": true,
+        "plaintext_sha256": "99e6f8b23b16b6a473698b9b95a9d476529756e58aaac40b331522ec321fe5ad",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "592892d794fbde750f2f1e3a59cdd37fc70aba588d97ffac9c1ad8a7d8ecb50e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.29.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.15.1/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.29.1",
+            "source": "same plaintext as firmware-history/v1.15.1/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.29.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.15.0/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 245444,
+        "img_size": 244336,
+        "encrypted": true,
+        "plaintext_sha256": "ce0f1317a096fa2f21b7f121bc2405363299baabb9e1666756fcb0624fa90675",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "8f7540d383d87a3979a87f17d672229f89d957844c5bcf8b5d0624d3588f1a2b",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.29.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.15.1/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.29.1",
+            "source": "same plaintext as firmware-history/v1.15.1/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.29.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.15.0/kb_fwr.bin"
+      }
+    ]
+  },
+  {
+    "tag": "v1.17.0",
+    "channel": "beta",
+    "published_at": "2026-02-07T11:31:36Z",
+    "prerelease": false,
+    "app_version": "1.17.0",
+    "source_asset": "NayaFlow-Beta-1.17.0-arm64-mac.zip",
+    "source_asset_sha256": "2fd8d1d09b125561b0db2801e56acc7241938368cc1f020989283b6cd49ac18d",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.2.0",
+      "0.3.29.1"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "51d9d08e656b1a2ffb48b9848f7934233831710e1eb3a20af73cd890a84235bf",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.2.0",
+          "lfs": "2.1",
+          "apps": {
+            "Float_UserApp.sfb": "b59da5ba185be7aabe706ed3694cf5f78b9ceb7bc88a3a5835e079c7b5529ff2",
+            "Query_UserApp.sfb": "651d1226017d1db9e600a07742157fe968e0f07a8aeca1b5fef349c570c93312",
+            "Touch_UserApp.sfb": "7cc8f33db04832ae4f6a22fc082915e50afafb30db7416130debe687533c51ca",
+            "Track_UserApp.sfb": "f9da852d10a1db2694ed2f250ae2a380330871a48c94582b313a71a20f5aa9d1",
+            "Tune_UserApp.sfb": "67bb9b17b213c78ae0911a004151fc9bb7946e336073d0e76cfac7b69f65e805"
+          }
+        },
+        "firmware_version": "2.2.0",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.2.0",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.2.0",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.15.0/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 362740,
+        "img_size": 361632,
+        "encrypted": true,
+        "plaintext_sha256": "99e6f8b23b16b6a473698b9b95a9d476529756e58aaac40b331522ec321fe5ad",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "592892d794fbde750f2f1e3a59cdd37fc70aba588d97ffac9c1ad8a7d8ecb50e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.29.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.15.1/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.29.1",
+            "source": "same plaintext as firmware-history/v1.15.1/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.29.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.15.0/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 245444,
+        "img_size": 244336,
+        "encrypted": true,
+        "plaintext_sha256": "ce0f1317a096fa2f21b7f121bc2405363299baabb9e1666756fcb0624fa90675",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "8f7540d383d87a3979a87f17d672229f89d957844c5bcf8b5d0624d3588f1a2b",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.29.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.15.1/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.29.1",
+            "source": "same plaintext as firmware-history/v1.15.1/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.29.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.15.0/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.15.0/kb_fwr.bin"
+      }
+    ]
+  },
+  {
+    "tag": "v1.17.1",
+    "channel": "beta",
+    "published_at": "2026-02-11T18:37:26Z",
+    "prerelease": true,
+    "app_version": "1.17.1",
+    "source_asset": "NayaFlow-Beta-1.17.1-mac.zip",
+    "source_asset_sha256": "d84e49eb992ac1f0ff68c21893c3ebce4ae0eec30503a8dc019ed3152fabcc24",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.2",
+      "0.3.30.0",
+      "0.3.31.1"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.2",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "241a6c8ac26a0ed3348c7ba4265a42ea73fe4fce33a117b9a080848f1b329f7f",
+            "Query_UserApp.sfb": "d202e3bf2b64652724ee15bc7383c9efc8edc205672d9c1f4eadf728ef18de59",
+            "Touch_UserApp.sfb": "4378a0afca6224f4516890e305cb5afe272d044d5f32a0bcbbcdb338e2cec3f2",
+            "Track_UserApp.sfb": "37af9193611272de6e0d65ab863f9792eba53eee1c118555f1663590be475cea",
+            "Tune_UserApp.sfb": "6330c55f1db3bb8893d8124be94708d1fd9e6b6664591187557686fec184e05a"
+          }
+        },
+        "firmware_version": "2.3.2",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.2",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.2",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.17.2/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 305556,
+        "img_size": 304448,
+        "encrypted": true,
+        "plaintext_sha256": "1b259d25983bb6db0fba53d191e3dae736ae94dbd1b5b1a0fbee036e09524246",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "70dd185f0cc8fdf5ea511fcb2f546211645484c1cf6d095c11c484a9d664499d",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.31.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.17.3/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.31.1",
+            "source": "same plaintext as firmware-history/v1.17.3/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.31.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.17.2/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 219172,
+        "img_size": 218064,
+        "encrypted": true,
+        "plaintext_sha256": "90f98e4d8320b86cb2d122cefaff5c0f22f6b05433ba0939c12685e88ed6ef8a",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "4dfe7feb35d6f5711687cd9e9974140d657afe52197dd8814dde017cc46a8f8c",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.31.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.17.3/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.31.1",
+            "source": "same plaintext as firmware-history/v1.17.3/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.31.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.17.2/kb_fwr.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.17.1-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.17.2",
+    "channel": "beta",
+    "published_at": "2026-02-11T21:46:46Z",
+    "prerelease": false,
+    "app_version": "1.17.2",
+    "source_asset": "NayaFlow-Beta-1.17.2-mac.zip",
+    "source_asset_sha256": "552dfe04e058e0d3116dd04f4a7930bf261c040de7bc8ea98a66e352a37549cf",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.2",
+      "0.3.30.0",
+      "0.3.31.1"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.2",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "241a6c8ac26a0ed3348c7ba4265a42ea73fe4fce33a117b9a080848f1b329f7f",
+            "Query_UserApp.sfb": "d202e3bf2b64652724ee15bc7383c9efc8edc205672d9c1f4eadf728ef18de59",
+            "Touch_UserApp.sfb": "4378a0afca6224f4516890e305cb5afe272d044d5f32a0bcbbcdb338e2cec3f2",
+            "Track_UserApp.sfb": "37af9193611272de6e0d65ab863f9792eba53eee1c118555f1663590be475cea",
+            "Tune_UserApp.sfb": "6330c55f1db3bb8893d8124be94708d1fd9e6b6664591187557686fec184e05a"
+          }
+        },
+        "firmware_version": "2.3.2",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.2",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.2",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.17.2/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 305556,
+        "img_size": 304448,
+        "encrypted": true,
+        "plaintext_sha256": "1b259d25983bb6db0fba53d191e3dae736ae94dbd1b5b1a0fbee036e09524246",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "70dd185f0cc8fdf5ea511fcb2f546211645484c1cf6d095c11c484a9d664499d",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.31.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.17.3/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.31.1",
+            "source": "same plaintext as firmware-history/v1.17.3/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.31.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.17.2/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 219172,
+        "img_size": 218064,
+        "encrypted": true,
+        "plaintext_sha256": "90f98e4d8320b86cb2d122cefaff5c0f22f6b05433ba0939c12685e88ed6ef8a",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "4dfe7feb35d6f5711687cd9e9974140d657afe52197dd8814dde017cc46a8f8c",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.31.1",
+        "firmware_version_source": "same plaintext as firmware-history/v1.17.3/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.31.1",
+            "source": "same plaintext as firmware-history/v1.17.3/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.31.1",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.17.2/kb_fwr.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.17.2-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.18.0",
+    "channel": "beta",
+    "published_at": "2026-03-12T11:36:14Z",
+    "prerelease": false,
+    "app_version": "1.18.0",
+    "source_asset": "NayaFlow-Beta-1.18.0-mac.zip",
+    "source_asset_sha256": "f7ff1cf25e56c1d662eb263a52e2f1bb7d3c7fc95a2ab066374c1b2d422428b2",
+    "source_platform": "mac",
+    "note_declares": {
+      "create": "3.35.4"
+    },
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.2",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.4"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.2",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "241a6c8ac26a0ed3348c7ba4265a42ea73fe4fce33a117b9a080848f1b329f7f",
+            "Query_UserApp.sfb": "d202e3bf2b64652724ee15bc7383c9efc8edc205672d9c1f4eadf728ef18de59",
+            "Touch_UserApp.sfb": "4378a0afca6224f4516890e305cb5afe272d044d5f32a0bcbbcdb338e2cec3f2",
+            "Track_UserApp.sfb": "37af9193611272de6e0d65ab863f9792eba53eee1c118555f1663590be475cea",
+            "Tune_UserApp.sfb": "6330c55f1db3bb8893d8124be94708d1fd9e6b6664591187557686fec184e05a"
+          }
+        },
+        "firmware_version": "2.3.2",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.2",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.2",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.17.2/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 313380,
+        "img_size": 312272,
+        "encrypted": true,
+        "plaintext_sha256": "036059b2ecbd89265bc0dfc9030ccf3c2332d555aed7bf91cfa146d22e8c5979",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a126f4f6dd0f45bd0572e4f107a22bd4697850ef2b548d3ff76e662bbe91651c",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "beta note v1.18.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 221796,
+        "img_size": 220688,
+        "encrypted": true,
+        "plaintext_sha256": "959fbae1d8359ebee2f23f483f6a49feb3f9e3dd85238637ee4bb7abe3e61a1d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a21e28c914e60ad171c962c292083ffa29ff454478720a008a7b927a1d8a314e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "beta note v1.18.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwr.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.18.0-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.19.0",
+    "channel": "beta",
+    "published_at": "2026-03-25T09:06:36Z",
+    "prerelease": false,
+    "app_version": "1.19.0",
+    "source_asset": "NayaFlow-Beta-1.19.0-mac.zip",
+    "source_asset_sha256": "e391342ae57caf8eb67c1a2dcd7a91e389dd0614e7b7f5de1845d527d5e4826f",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.2",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.4"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.2",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "241a6c8ac26a0ed3348c7ba4265a42ea73fe4fce33a117b9a080848f1b329f7f",
+            "Query_UserApp.sfb": "d202e3bf2b64652724ee15bc7383c9efc8edc205672d9c1f4eadf728ef18de59",
+            "Touch_UserApp.sfb": "4378a0afca6224f4516890e305cb5afe272d044d5f32a0bcbbcdb338e2cec3f2",
+            "Track_UserApp.sfb": "37af9193611272de6e0d65ab863f9792eba53eee1c118555f1663590be475cea",
+            "Tune_UserApp.sfb": "6330c55f1db3bb8893d8124be94708d1fd9e6b6664591187557686fec184e05a"
+          }
+        },
+        "firmware_version": "2.3.2",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.2",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.2",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.17.2/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 313380,
+        "img_size": 312272,
+        "encrypted": true,
+        "plaintext_sha256": "036059b2ecbd89265bc0dfc9030ccf3c2332d555aed7bf91cfa146d22e8c5979",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a126f4f6dd0f45bd0572e4f107a22bd4697850ef2b548d3ff76e662bbe91651c",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 221796,
+        "img_size": 220688,
+        "encrypted": true,
+        "plaintext_sha256": "959fbae1d8359ebee2f23f483f6a49feb3f9e3dd85238637ee4bb7abe3e61a1d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a21e28c914e60ad171c962c292083ffa29ff454478720a008a7b927a1d8a314e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwr.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.19.0-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.19.1",
+    "channel": "beta",
+    "published_at": "2026-04-03T14:07:09Z",
+    "prerelease": false,
+    "app_version": "1.19.1",
+    "source_asset": "NayaFlow-Beta-1.19.1-mac.zip",
+    "source_asset_sha256": "404b2208e0b40ff41fe508d7f2bf1fff80ea3ef8d735335e7f1d572b2cbe2f7b",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.2",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.4"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.2",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "241a6c8ac26a0ed3348c7ba4265a42ea73fe4fce33a117b9a080848f1b329f7f",
+            "Query_UserApp.sfb": "d202e3bf2b64652724ee15bc7383c9efc8edc205672d9c1f4eadf728ef18de59",
+            "Touch_UserApp.sfb": "4378a0afca6224f4516890e305cb5afe272d044d5f32a0bcbbcdb338e2cec3f2",
+            "Track_UserApp.sfb": "37af9193611272de6e0d65ab863f9792eba53eee1c118555f1663590be475cea",
+            "Tune_UserApp.sfb": "6330c55f1db3bb8893d8124be94708d1fd9e6b6664591187557686fec184e05a"
+          }
+        },
+        "firmware_version": "2.3.2",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.2",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.2",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.17.2/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 313380,
+        "img_size": 312272,
+        "encrypted": true,
+        "plaintext_sha256": "036059b2ecbd89265bc0dfc9030ccf3c2332d555aed7bf91cfa146d22e8c5979",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a126f4f6dd0f45bd0572e4f107a22bd4697850ef2b548d3ff76e662bbe91651c",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 221796,
+        "img_size": 220688,
+        "encrypted": true,
+        "plaintext_sha256": "959fbae1d8359ebee2f23f483f6a49feb3f9e3dd85238637ee4bb7abe3e61a1d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a21e28c914e60ad171c962c292083ffa29ff454478720a008a7b927a1d8a314e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwr.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.19.1-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.20.0",
+    "channel": "beta",
+    "published_at": "2026-04-10T13:36:57Z",
+    "prerelease": false,
+    "app_version": "1.20.0",
+    "source_asset": "NayaFlow-Beta-1.20.0-mac.zip",
+    "source_asset_sha256": "debe49d042e94ef2b3472ed8568858bd707dd3bca5659006131490d6aac267eb",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.2",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.4"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.2",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "241a6c8ac26a0ed3348c7ba4265a42ea73fe4fce33a117b9a080848f1b329f7f",
+            "Query_UserApp.sfb": "d202e3bf2b64652724ee15bc7383c9efc8edc205672d9c1f4eadf728ef18de59",
+            "Touch_UserApp.sfb": "4378a0afca6224f4516890e305cb5afe272d044d5f32a0bcbbcdb338e2cec3f2",
+            "Track_UserApp.sfb": "37af9193611272de6e0d65ab863f9792eba53eee1c118555f1663590be475cea",
+            "Tune_UserApp.sfb": "6330c55f1db3bb8893d8124be94708d1fd9e6b6664591187557686fec184e05a"
+          }
+        },
+        "firmware_version": "2.3.2",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.2",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.2",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.17.2/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 313380,
+        "img_size": 312272,
+        "encrypted": true,
+        "plaintext_sha256": "036059b2ecbd89265bc0dfc9030ccf3c2332d555aed7bf91cfa146d22e8c5979",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a126f4f6dd0f45bd0572e4f107a22bd4697850ef2b548d3ff76e662bbe91651c",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 221796,
+        "img_size": 220688,
+        "encrypted": true,
+        "plaintext_sha256": "959fbae1d8359ebee2f23f483f6a49feb3f9e3dd85238637ee4bb7abe3e61a1d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a21e28c914e60ad171c962c292083ffa29ff454478720a008a7b927a1d8a314e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwr.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.20.0-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.21.0",
+    "channel": "beta",
+    "published_at": "2026-04-21T10:21:14Z",
+    "prerelease": false,
+    "app_version": "1.21.0",
+    "source_asset": "NayaFlow-Beta-1.21.0-mac.zip",
+    "source_asset_sha256": "a402f7fbc8eece1b134ab4dba25cab6c5ac1fedfaecb8daf0e781808517f0f75",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {},
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.2",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.4"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.2",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "241a6c8ac26a0ed3348c7ba4265a42ea73fe4fce33a117b9a080848f1b329f7f",
+            "Query_UserApp.sfb": "d202e3bf2b64652724ee15bc7383c9efc8edc205672d9c1f4eadf728ef18de59",
+            "Touch_UserApp.sfb": "4378a0afca6224f4516890e305cb5afe272d044d5f32a0bcbbcdb338e2cec3f2",
+            "Track_UserApp.sfb": "37af9193611272de6e0d65ab863f9792eba53eee1c118555f1663590be475cea",
+            "Tune_UserApp.sfb": "6330c55f1db3bb8893d8124be94708d1fd9e6b6664591187557686fec184e05a"
+          }
+        },
+        "firmware_version": "2.3.2",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.2",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.2",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.17.2/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 313380,
+        "img_size": 312272,
+        "encrypted": true,
+        "plaintext_sha256": "036059b2ecbd89265bc0dfc9030ccf3c2332d555aed7bf91cfa146d22e8c5979",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a126f4f6dd0f45bd0572e4f107a22bd4697850ef2b548d3ff76e662bbe91651c",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 221796,
+        "img_size": 220688,
+        "encrypted": true,
+        "plaintext_sha256": "959fbae1d8359ebee2f23f483f6a49feb3f9e3dd85238637ee4bb7abe3e61a1d",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a21e28c914e60ad171c962c292083ffa29ff454478720a008a7b927a1d8a314e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.35.4",
+        "firmware_version_source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.35.4",
+            "source": "same plaintext as firmware-history/v1.21.0/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.35.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.19.1/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.19.1/kb_fwr.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.21.0-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.22.0",
+    "channel": "beta",
+    "published_at": "2026-05-18T07:43:52Z",
+    "prerelease": false,
+    "app_version": "1.22.0",
+    "source_asset": "NayaFlow-Beta-1.22.0-mac.zip",
+    "source_asset_sha256": "0bb060099e2a20071eae06daeea81d56fb094e7726a2722547f5d68fbd4ba8f8",
+    "source_platform": "mac",
+    "note_declares": {
+      "create": "3.39.3"
+    },
+    "app_js_declares": {
+      "NAYA_CREATE_FW_VERSION": "3.39.4",
+      "NAYA_MODULE_FW_VERSION": "2.3.2"
+    },
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.2",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.0",
+      "0.3.36.0",
+      "0.3.39.4"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "84deccbfab93527c872e37b3f219cccf8ab836e362126b27934f5db52ace39fa",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.2",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "241a6c8ac26a0ed3348c7ba4265a42ea73fe4fce33a117b9a080848f1b329f7f",
+            "Query_UserApp.sfb": "d202e3bf2b64652724ee15bc7383c9efc8edc205672d9c1f4eadf728ef18de59",
+            "Touch_UserApp.sfb": "4378a0afca6224f4516890e305cb5afe272d044d5f32a0bcbbcdb338e2cec3f2",
+            "Track_UserApp.sfb": "37af9193611272de6e0d65ab863f9792eba53eee1c118555f1663590be475cea",
+            "Tune_UserApp.sfb": "6330c55f1db3bb8893d8124be94708d1fd9e6b6664591187557686fec184e05a"
+          }
+        },
+        "firmware_version": "2.3.2",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.2",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.2",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          },
+          {
+            "version": "2.3.2",
+            "source": "app JS NAYA_MODULE_FW_VERSION"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.17.2/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.17.2/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 328116,
+        "img_size": 327008,
+        "encrypted": true,
+        "plaintext_sha256": "d9f7f80a402e0deb2c13a0e803fcb97db28584e40a866254fa3d051feab52c4e",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "845ff18080fd02994f8e5395ed6711b6185b73bba5f8cbb2339ab1375d2d83df",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.39.4",
+        "firmware_version_source": "NayaCore version literal (highest 0.3.x.y)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.39.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.39.4",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.39.3",
+            "source": "beta note v1.22.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": true,
+        "stored": true,
+        "path": "firmware-history-beta/v1.22.0/kb_fwl.bin",
+        "duplicate_of": null
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 225572,
+        "img_size": 224464,
+        "encrypted": true,
+        "plaintext_sha256": "d3d7bf81757dda7b5f93e90791fb2ed5f2ad03dd7872958901bab7d21c6f22ff",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "74176ce35ca49af9d07c69d9934b73d1a496e31d29f1611a21a865945415135a",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.39.4",
+        "firmware_version_source": "NayaCore version literal (highest 0.3.x.y)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.39.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.39.4",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.39.3",
+            "source": "beta note v1.22.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": true,
+        "stored": true,
+        "path": "firmware-history-beta/v1.22.0/kb_fwr.bin",
+        "duplicate_of": null
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.22.0-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.23.0",
+    "channel": "beta",
+    "published_at": "2026-05-21T10:37:48Z",
+    "prerelease": false,
+    "app_version": "1.23.0",
+    "source_asset": "NayaFlow-Beta-1.23.0-mac.zip",
+    "source_asset_sha256": "3ab3a1f83d0da98c234a8493bd86f94c32ddf07f5184842c21b525a50ff4f388",
+    "source_platform": "mac",
+    "note_declares": {
+      "create": "3.40.0",
+      "modules": "2.3.3"
+    },
+    "app_js_declares": {
+      "NAYA_CREATE_FW_VERSION": "3.40.0",
+      "NAYA_MODULE_FW_VERSION": "2.3.3"
+    },
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.3",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.0",
+      "0.3.36.0",
+      "0.3.40.0"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "97d94e9e3d8bfc87b6ee99d01a368c699cdf7fa3d582e7241b1100a4e06dec5a",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.3",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "cdca35065c69f8d4215ae389fbd909868c87fab1beca9802d6b801d40428def5",
+            "Query_UserApp.sfb": "c51424615367e6a6abc68dba0e6a8abcbc86ca58cd18909628fd602b53eaa1db",
+            "Touch_UserApp.sfb": "7fd6c898bb5df399877f291a4b2810d7872c4f1f77211c1de39fecaa8fcef40a",
+            "Track_UserApp.sfb": "07c3427119b89ce7534a18fd27d1a3b36a1eeaa0c35413c07ae4125bbf9d61fd",
+            "Tune_UserApp.sfb": "5d58e3605d9dbf0f15f271e6f8369d14f084053977b7e67402acf4b36df106fa"
+          }
+        },
+        "firmware_version": "2.3.3",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.3",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.3",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          },
+          {
+            "version": "2.3.3",
+            "source": "app JS NAYA_MODULE_FW_VERSION"
+          },
+          {
+            "version": "2.3.3",
+            "source": "beta note v1.23.0 (NayaModules heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.25.0/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.25.0/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 328372,
+        "img_size": 327264,
+        "encrypted": true,
+        "plaintext_sha256": "01e3ddda14b5f2dc3554c59d95df2e95319fe24624f97489cafa51a9db1f8a6e",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "d2e46e2acdc8e9534ccc958f4d32dd2cc87ce0f1ba5d5c273c315afffc0aa6bd",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.40.0",
+        "firmware_version_source": "NayaCore version literal (highest 0.3.x.y)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.40.0",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.40.0",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.40.0",
+            "source": "beta note v1.23.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": true,
+        "path": "firmware-history-beta/v1.23.0/kb_fwl.bin",
+        "duplicate_of": null
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 225908,
+        "img_size": 224800,
+        "encrypted": true,
+        "plaintext_sha256": "8b0a4e3d78dff551596d8d0aaa727f4f3d2db34021597736507bea17bfd7459f",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f769368921aa7f5f6bb3a024f374f87a0a2e38d930c6f117ea978f62a08ddf8e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.40.0",
+        "firmware_version_source": "NayaCore version literal (highest 0.3.x.y)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.40.0",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.40.0",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.40.0",
+            "source": "beta note v1.23.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": true,
+        "path": "firmware-history-beta/v1.23.0/kb_fwr.bin",
+        "duplicate_of": null
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.23.0-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.23.1",
+    "channel": "beta",
+    "published_at": "2026-05-26T14:42:58Z",
+    "prerelease": false,
+    "app_version": "1.23.1",
+    "source_asset": "NayaFlow-Beta-1.23.1-mac.zip",
+    "source_asset_sha256": "15ff11900f642c76da9900ef48dae4eea7e7abf2ed5545c4747fe87a76f54266",
+    "source_platform": "mac",
+    "note_declares": {},
+    "app_js_declares": {
+      "NAYA_CREATE_FW_VERSION": "3.40.0",
+      "NAYA_MODULE_FW_VERSION": "2.3.3"
+    },
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.3",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.0",
+      "0.3.36.0",
+      "0.3.40.0"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "97d94e9e3d8bfc87b6ee99d01a368c699cdf7fa3d582e7241b1100a4e06dec5a",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.3",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "cdca35065c69f8d4215ae389fbd909868c87fab1beca9802d6b801d40428def5",
+            "Query_UserApp.sfb": "c51424615367e6a6abc68dba0e6a8abcbc86ca58cd18909628fd602b53eaa1db",
+            "Touch_UserApp.sfb": "7fd6c898bb5df399877f291a4b2810d7872c4f1f77211c1de39fecaa8fcef40a",
+            "Track_UserApp.sfb": "07c3427119b89ce7534a18fd27d1a3b36a1eeaa0c35413c07ae4125bbf9d61fd",
+            "Tune_UserApp.sfb": "5d58e3605d9dbf0f15f271e6f8369d14f084053977b7e67402acf4b36df106fa"
+          }
+        },
+        "firmware_version": "2.3.3",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.3",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.3",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          },
+          {
+            "version": "2.3.3",
+            "source": "app JS NAYA_MODULE_FW_VERSION"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.25.0/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.25.0/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 328372,
+        "img_size": 327264,
+        "encrypted": true,
+        "plaintext_sha256": "01e3ddda14b5f2dc3554c59d95df2e95319fe24624f97489cafa51a9db1f8a6e",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "d2e46e2acdc8e9534ccc958f4d32dd2cc87ce0f1ba5d5c273c315afffc0aa6bd",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.40.0",
+        "firmware_version_source": "same plaintext as firmware-history-beta/v1.23.0/kb_fwl.bin",
+        "firmware_version_evidence": [
+          {
+            "version": "3.40.0",
+            "source": "same plaintext as firmware-history-beta/v1.23.0/kb_fwl.bin"
+          },
+          {
+            "version": "3.40.0",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.40.0",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history-beta/v1.23.0/kb_fwl.bin",
+        "duplicate_of": "firmware-history-beta/v1.23.0/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 225908,
+        "img_size": 224800,
+        "encrypted": true,
+        "plaintext_sha256": "8b0a4e3d78dff551596d8d0aaa727f4f3d2db34021597736507bea17bfd7459f",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f769368921aa7f5f6bb3a024f374f87a0a2e38d930c6f117ea978f62a08ddf8e",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.40.0",
+        "firmware_version_source": "same plaintext as firmware-history-beta/v1.23.0/kb_fwr.bin",
+        "firmware_version_evidence": [
+          {
+            "version": "3.40.0",
+            "source": "same plaintext as firmware-history-beta/v1.23.0/kb_fwr.bin"
+          },
+          {
+            "version": "3.40.0",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.40.0",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history-beta/v1.23.0/kb_fwr.bin",
+        "duplicate_of": "firmware-history-beta/v1.23.0/kb_fwr.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.23.1-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.24.0",
+    "channel": "beta",
+    "published_at": "2026-06-09T10:18:53Z",
+    "prerelease": false,
+    "app_version": "1.24.0",
+    "source_asset": "NayaFlow-Beta-1.24.0-mac.zip",
+    "source_asset_sha256": "6d0ca555395823f7a80792120014115629e5349ba2164836e735c9e730fe0680",
+    "source_platform": "mac",
+    "note_declares": {
+      "create": "3.40.4"
+    },
+    "app_js_declares": {
+      "NAYA_CREATE_FW_VERSION": "3.40.4",
+      "NAYA_MODULE_FW_VERSION": "2.3.3"
+    },
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.2.0.0",
+      "0.2.3.3",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.35.0",
+      "0.3.36.0",
+      "0.3.40.4"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwr.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "97d94e9e3d8bfc87b6ee99d01a368c699cdf7fa3d582e7241b1100a4e06dec5a",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.3",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "cdca35065c69f8d4215ae389fbd909868c87fab1beca9802d6b801d40428def5",
+            "Query_UserApp.sfb": "c51424615367e6a6abc68dba0e6a8abcbc86ca58cd18909628fd602b53eaa1db",
+            "Touch_UserApp.sfb": "7fd6c898bb5df399877f291a4b2810d7872c4f1f77211c1de39fecaa8fcef40a",
+            "Track_UserApp.sfb": "07c3427119b89ce7534a18fd27d1a3b36a1eeaa0c35413c07ae4125bbf9d61fd",
+            "Tune_UserApp.sfb": "5d58e3605d9dbf0f15f271e6f8369d14f084053977b7e67402acf4b36df106fa"
+          }
+        },
+        "firmware_version": "2.3.3",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.3",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.3",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          },
+          {
+            "version": "2.3.3",
+            "source": "app JS NAYA_MODULE_FW_VERSION"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.25.0/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.25.0/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 328916,
+        "img_size": 327808,
+        "encrypted": true,
+        "plaintext_sha256": "3740d3631311b64a787bded506402941ad17108b92015a6a3d3ac02f04b6e8d5",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "36ee12661ccc2281fb6756cb3b533614afa146fe4b04420af281b17579a3a664",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.40.4",
+        "firmware_version_source": "NayaCore version literal (highest 0.3.x.y)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.40.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.40.4",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.40.4",
+            "source": "beta note v1.24.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": true,
+        "path": "firmware-history-beta/v1.24.0/kb_fwl.bin",
+        "duplicate_of": null
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 226132,
+        "img_size": 225024,
+        "encrypted": true,
+        "plaintext_sha256": "684f70f853b0ec1e4318c5dc52f265284545b5ca06ecb6048d4fc9b3816e4c22",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "da499748ffa23953527509105e20b240a67543c9e8ab4e3e0676699fe4358e7d",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.40.4",
+        "firmware_version_source": "NayaCore version literal (highest 0.3.x.y)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.40.4",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.40.4",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.40.4",
+            "source": "beta note v1.24.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": true,
+        "path": "firmware-history-beta/v1.24.0/kb_fwr.bin",
+        "duplicate_of": null
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.24.0-arm64-mac.zip",
+      "identical": true
+    }
+  },
+  {
+    "tag": "v1.25.0",
+    "channel": "beta",
+    "published_at": "2026-07-17T17:52:45Z",
+    "prerelease": false,
+    "app_version": "1.25.0",
+    "source_asset": "NayaFlow-Beta-1.25.0-mac.zip",
+    "source_asset_sha256": "8697d5f9214af6d6e6ca19a30c3471b79ed70f461130000819538b980fe02de5",
+    "source_platform": "mac",
+    "note_declares": {
+      "create": "3.41.0"
+    },
+    "app_js_declares": {
+      "NAYA_CREATE_FW_VERSION": "3.41.0",
+      "NAYA_MODULE_FW_VERSION": "2.3.3"
+    },
+    "nayacore_version_literals": [
+      "0.0.0.0",
+      "0.1.0.0",
+      "0.1.0.2",
+      "0.2.0.0",
+      "0.2.3.0",
+      "0.2.3.3",
+      "0.3.30.0",
+      "0.3.32.0",
+      "0.3.34.0",
+      "0.3.36.0",
+      "0.3.41.0"
+    ],
+    "firmware_names": [
+      "FlashMemory.bin",
+      "kb_fwl.bin",
+      "kb_fwl_64.bin",
+      "kb_fwr.bin",
+      "kb_fwr_64.bin"
+    ],
+    "files": [
+      {
+        "name": "FlashMemory.bin",
+        "category": "module",
+        "side": "",
+        "flash_gen": "",
+        "resource_len": 1048576,
+        "type": "other",
+        "mcuboot_image_len": null,
+        "img_size": null,
+        "encrypted": false,
+        "plaintext_sha256": null,
+        "keyhash": null,
+        "resource_sha256": "97d94e9e3d8bfc87b6ee99d01a368c699cdf7fa3d582e7241b1100a4e06dec5a",
+        "mcuboot_header_version": null,
+        "trailer": null,
+        "module_bundle": {
+          "version": "2.3.3",
+          "lfs": "2.0",
+          "apps": {
+            "Float_UserApp.sfb": "cdca35065c69f8d4215ae389fbd909868c87fab1beca9802d6b801d40428def5",
+            "Query_UserApp.sfb": "c51424615367e6a6abc68dba0e6a8abcbc86ca58cd18909628fd602b53eaa1db",
+            "Touch_UserApp.sfb": "7fd6c898bb5df399877f291a4b2810d7872c4f1f77211c1de39fecaa8fcef40a",
+            "Track_UserApp.sfb": "07c3427119b89ce7534a18fd27d1a3b36a1eeaa0c35413c07ae4125bbf9d61fd",
+            "Tune_UserApp.sfb": "5d58e3605d9dbf0f15f271e6f8369d14f084053977b7e67402acf4b36df106fa"
+          }
+        },
+        "firmware_version": "2.3.3",
+        "firmware_version_source": "LittleFS VERSION file in the bundle",
+        "firmware_version_evidence": [
+          {
+            "version": "2.3.3",
+            "source": "LittleFS VERSION file in the bundle"
+          },
+          {
+            "version": "2.3.3",
+            "source": "NayaCore version literal (highest 0.2.x.y)"
+          },
+          {
+            "version": "2.3.3",
+            "source": "app JS NAYA_MODULE_FW_VERSION"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.25.0/module/FlashMemory.bin",
+        "duplicate_of": "firmware-history/v1.25.0/module/FlashMemory.bin"
+      },
+      {
+        "name": "kb_fwl.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 329988,
+        "img_size": 328880,
+        "encrypted": true,
+        "plaintext_sha256": "479e89ba6c92ead9c46d1228d5033437caf63d72db89364081b9b0a321b31283",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "3d3e544ece9d986a0e6cae41879cade1749272cb8fac39b6f8adc10edff111e0",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.41.0",
+        "firmware_version_source": "same plaintext as firmware-history/v1.25.1/kb_fwl.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.41.0",
+            "source": "same plaintext as firmware-history/v1.25.1/kb_fwl.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.41.0",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.41.0",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.41.0",
+            "source": "beta note v1.25.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.25.0/kb_fwl.bin",
+        "duplicate_of": "firmware-history/v1.25.0/kb_fwl.bin"
+      },
+      {
+        "name": "kb_fwl_64.bin",
+        "category": "keyboard",
+        "side": "left",
+        "flash_gen": "B",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 329988,
+        "img_size": 328880,
+        "encrypted": true,
+        "plaintext_sha256": "07dd2523bf87ee1385fdfb4dbaacd57c8f928e3751306a3e63eac748b2454297",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "afa7642bcf6cbc210917d275d4394f653dcb754dfd1e57f1cb4caa184992dba4",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.41.0",
+        "firmware_version_source": "same plaintext as firmware-history/v1.25.1/kb_fwl_64.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.41.0",
+            "source": "same plaintext as firmware-history/v1.25.1/kb_fwl_64.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.41.0",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.41.0",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.41.0",
+            "source": "beta note v1.25.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.25.0/kb_fwl_64.bin",
+        "duplicate_of": "firmware-history/v1.25.0/kb_fwl_64.bin"
+      },
+      {
+        "name": "kb_fwr.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "A",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 227108,
+        "img_size": 226000,
+        "encrypted": true,
+        "plaintext_sha256": "2abb2695b9b6e94883553e101ea5edb8e1934e3919d62b14e589331fe9f5bcfc",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "a4c137eb4d8b55f3cd1282b1752b8eb45d00c1180189aee531a6e990a407acbf",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.41.0",
+        "firmware_version_source": "same plaintext as firmware-history/v1.25.1/kb_fwr.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.41.0",
+            "source": "same plaintext as firmware-history/v1.25.1/kb_fwr.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.41.0",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.41.0",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.41.0",
+            "source": "beta note v1.25.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.25.0/kb_fwr.bin",
+        "duplicate_of": "firmware-history/v1.25.0/kb_fwr.bin"
+      },
+      {
+        "name": "kb_fwr_64.bin",
+        "category": "keyboard",
+        "side": "right",
+        "flash_gen": "B",
+        "resource_len": 663552,
+        "type": "mcuboot",
+        "mcuboot_image_len": 227108,
+        "img_size": 226000,
+        "encrypted": true,
+        "plaintext_sha256": "87f63fd3be514538f099803c0912516a54bbb256facf2c50df6c0c85c16a6677",
+        "keyhash": "de8b07187913e6e788306618e4166e38a8c2eda99b68970d17fd00e75fd5b972",
+        "resource_sha256": "f12eb1ca630f6b0d1356383530f422462dbe650ce6c06e4d2f288ef3390a4131",
+        "mcuboot_header_version": "1.2.3+4",
+        "trailer": {
+          "present": true,
+          "magic": "good",
+          "image_ok": true,
+          "swap_on_upload": "permanent"
+        },
+        "firmware_version": "3.41.0",
+        "firmware_version_source": "same plaintext as firmware-history/v1.25.1/kb_fwr_64.bin (OpenFlow catalogue)",
+        "firmware_version_evidence": [
+          {
+            "version": "3.41.0",
+            "source": "same plaintext as firmware-history/v1.25.1/kb_fwr_64.bin (OpenFlow catalogue)"
+          },
+          {
+            "version": "3.41.0",
+            "source": "NayaCore version literal (highest 0.3.x.y)"
+          },
+          {
+            "version": "3.41.0",
+            "source": "app JS NAYA_CREATE_FW_VERSION"
+          },
+          {
+            "version": "3.41.0",
+            "source": "beta note v1.25.0 (NayaCreate heading)"
+          }
+        ],
+        "firmware_version_conflict": false,
+        "stored": false,
+        "path": "firmware-history/v1.25.0/kb_fwr_64.bin",
+        "duplicate_of": "firmware-history/v1.25.0/kb_fwr_64.bin"
+      }
+    ],
+    "cross_check": {
+      "asset": "NayaFlow-Beta-1.25.0-arm64-mac.zip",
+      "identical": true
+    }
+  }
+]

@@ -21,10 +21,20 @@ CHANGELOG.md       all release notes, newest first (14 of 25 carry notes)
 changelogs/        the same notes, one file per version
 releases/<tag>/    the downloaded binaries (gitignored; not in git)
 verify.py          re-check every downloaded file against the manifest digest/size
+firmware-history/       the Create and module firmware carved from each release (FIRMWARE-HISTORY.md)
+firmware-history-beta/  the same for the NayaFlow-Beta channel, only images not already above
 ```
 
 `MANIFEST.json`, `CHANGELOG.md`, `changelogs/` and this README are the git-tracked
 record. The binaries themselves are vendor material and stay out of git (`.gitignore`).
+
+## Beta channel
+
+NayaFlow also had a beta channel, **NayaTech/NayaFlow-beta-releases** (16 releases, v1.10.0 through
+v1.25.0, app name NayaFlow-Beta). Its installers are not mirrored here; the firmware they carried is,
+under `firmware-history-beta/`, and only where the bytes are not already in `firmware-history/`: the
+keyboard images of 3.39.4, 3.40.0 and 3.40.4, which never shipped on the stable channel. OpenFlow reads
+only `firmware-history/`. See "Beta channel" in `FIRMWARE-HISTORY.md`.
 
 ## Why the binaries matter beyond preservation
 

@@ -150,4 +150,67 @@ is the tracked record. Regenerate with `python tools/extract_history.py` from th
 - **v1.19.1** - v1.21.0: keyboard firmware unchanged across this run
 - **v1.25.0** - v1.25.1: keyboard firmware unchanged across this run
 
+## Beta channel
+
+NayaFlow also shipped a separate beta app, NayaFlow-Beta, from its own repo
+(https://github.com/NayaTech/NayaFlow-beta-releases: 16 releases, v1.10.0 through v1.25.0). Its images are
+carved the same way (the macOS zip, `extract_history.extract_version`) and kept in their own tree:
+
+```
+firmware-history-beta/
+    MANIFEST.json                    every beta release and every image it carried (stored or not)
+    <version>/kb_fwl.bin, kb_fwr.bin  only images that are not already in this repo
+    <version>/manifest.json          that release's entry from MANIFEST.json
+```
+
+- **Never inside `firmware-history/`.** The stable channel has the newer firmware (3.41.0), and OpenFlow's
+  firmware fetcher and catalogue read only `firmware-history/`, so nothing in the beta tree is offered to a flasher.
+- **De-duplicated by bytes.** An image whose `resource_sha256` equals a file in `firmware-history/`, or one an
+  earlier beta release already stored, is not stored again: its entry has `stored: false` and `duplicate_of` =
+  the kept copy (the official one when there is one, from the earliest release holding those bytes; otherwise the
+  earliest beta that carried it). The 16 releases carried 47 images; 6 are new, 39 are official copies, 2 repeat a beta.
+- **Same key, same packaging.** Every beta keyboard image is encrypted and signed with the stable key
+  (`KEYHASH de8b0718...`), has MCUboot header version `1.2.3+4`, and is the full 663552-byte slot with the swap
+  trailer already written (`image_ok` set), exactly like the stable images.
+- **Generation A only.** The beta-only firmware has no `_64` (generation B) build; `_64` images first appear in
+  1.25.0, on both channels.
+- **Versions** are three-part (3.39.4 = NayaCore's 0.3.39.4). The images carry no readable version, so each
+  entry lists every witness in `firmware_version_evidence`, strongest first: same plaintext as an image whose
+  version is known, the module bundle's own `VERSION` file, NayaCore's version literal, the app JS constant, the
+  release note. `firmware_version` is the first of them. Two notes disagree with their installer
+  (`firmware_version_conflict`): beta 1.16.0 announces keyboard 3.31.1 and modules 2.3.2 but carries the 1.15.x
+  images (3.29.1, 2.2.0) byte for byte, and beta 1.22.0 says 3.39.3 where its NayaCore and app JS both say 3.39.4.
+- Regenerate with `python tools/extract_beta.py --force` (reads the beta installers' macOS zips; the header facts
+  come from OpenFlow's `tools/build_firmware_catalog.py`).
+
+| Beta release | Published | Keyboard fw | Module fw | Images |
+|---|---|---|---|---|
+| v1.10.0 | 2025-09-01 | - | - | none: its NayaCore embeds no firmware |
+| v1.16.0 | 2026-02-03 | 3.29.1 | 2.2.0 | same bytes as `firmware-history/v1.15.0/` |
+| v1.16.1 | 2026-02-03 | 3.29.1 | 2.2.0 | same bytes as `firmware-history/v1.15.0/` |
+| v1.17.0 | 2026-02-07 | 3.29.1 | 2.2.0 | same bytes as `firmware-history/v1.15.0/` |
+| v1.17.1 | 2026-02-11 | 3.31.1 | 2.3.2 | same bytes as `firmware-history/v1.17.2/` |
+| v1.17.2 | 2026-02-11 | 3.31.1 | 2.3.2 | same bytes as `firmware-history/v1.17.2/` |
+| v1.18.0 | 2026-03-12 | 3.35.4 | 2.3.2 | keyboard: `firmware-history/v1.19.1/`; module: `firmware-history/v1.17.2/` |
+| v1.19.0 | 2026-03-25 | 3.35.4 | 2.3.2 | as v1.18.0 |
+| v1.19.1 | 2026-04-03 | 3.35.4 | 2.3.2 | as v1.18.0 |
+| v1.20.0 | 2026-04-10 | 3.35.4 | 2.3.2 | as v1.18.0 |
+| v1.21.0 | 2026-04-21 | 3.35.4 | 2.3.2 | as v1.18.0 |
+| v1.22.0 | 2026-05-18 | **3.39.4** (beta only) | 2.3.2 | keyboard **stored** in `v1.22.0/`; module: `firmware-history/v1.17.2/` |
+| v1.23.0 | 2026-05-21 | **3.40.0** (beta only) | 2.3.3 | keyboard **stored** in `v1.23.0/`; module: `firmware-history/v1.25.0/` |
+| v1.23.1 | 2026-05-26 | 3.40.0 | 2.3.3 | keyboard: `firmware-history-beta/v1.23.0/`; module: `firmware-history/v1.25.0/` |
+| v1.24.0 | 2026-06-09 | **3.40.4** (beta only) | 2.3.3 | keyboard **stored** in `v1.24.0/`; module: `firmware-history/v1.25.0/` |
+| v1.25.0 | 2026-07-17 | 3.41.0 (A and B) | 2.3.3 | same bytes as `firmware-history/v1.25.0/` |
+
+The six stored images (`sha` as in the catalogue above):
+
+| Version | File | Half | Gen | Image bytes | Firmware | plaintext_sha256 (16) |
+|---|---|---|---|---|---|---|
+| v1.22.0 | `kb_fwl.bin` | left | A | 327008 | 3.39.4 | `d9f7f80a402e0deb` |
+| v1.22.0 | `kb_fwr.bin` | right | A | 224464 | 3.39.4 | `d3d7bf81757dda7b` |
+| v1.23.0 | `kb_fwl.bin` | left | A | 327264 | 3.40.0 | `01e3ddda14b5f2dc` |
+| v1.23.0 | `kb_fwr.bin` | right | A | 224800 | 3.40.0 | `8b0a4e3d78dff551` |
+| v1.24.0 | `kb_fwl.bin` | left | A | 327808 | 3.40.4 | `3740d3631311b64a` |
+| v1.24.0 | `kb_fwr.bin` | right | A | 225024 | 3.40.4 | `684f70f853b0ec1e` |
+
 _No key material is stored here or anywhere in this repo; images are encrypted as shipped._
