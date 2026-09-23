@@ -185,7 +185,7 @@ state write) next to them: stock mcumgr, exactly as documented above.
 
 So: **keyboard image -> `image: 2`** (the secondary slot; the whole resource carries its own
 permanent-swap trailer, so a reset is all that follows, and MCUboot swaps and decrypts), **module bundle -> `image: 4`** (slot3_partition, the 1 MiB `M_Firmware` LittleFS partition;
-no mark-pending, a reset is enough, and the app reports the stored bundle version afterwards via
+no mark-pending and no reset (the half restarts itself; see the 2026-09-23 capture at the end), and the app reports the stored bundle version afterwards via
 `MODULE_FILE_FW_VERSION` 0xDE/0x100A, which only the LEFT half answers). The modules slot never
 appears in the slot map because it is not an MCUboot image slot; the vendor constant is the only
 source for it, and it should be used only on a bootloader whose map numbers the secondary slot 2.
@@ -382,3 +382,72 @@ halves match:
 * the peripheral's own USB command interface completes the handshake and then returns **empty
   payloads**, so it looks unreadable while working normally. It stays reachable through the
   central half's port at `dest 0x51`.
+
+---
+
+## Module firmware update, captured from NayaFlow (2026-09-23)
+
+What NayaFlow 1.25.1 (NayaCore v6.11.0) actually sends when it updates a module, recorded with
+USBPcap on the root hub plus NayaCore's own log. Warranty board, left half on 3.41.0, a Touch on
+2.1.2, and a keyboard holding module bundle 2.3.2. Result: **Touch 2.1.2 -> 2.3.3, success**, over
+two runs (the first stalled, see below). Evidence lives in the NayaOS repo under
+`device/out/module-fw-touch1-20260923*` (two pcaps, the NayaCore log, the decoded frames).
+
+### Preconditions (NayaFlow's own wording)
+
+* "Module Firmware can only be updated if the only Naya Device connected is a single up-to-date
+  Create Left with the docked module." The right half is off USB; the module is in the **left**
+  bay. A right-bay module is moved to the left bay to be updated.
+* "Up-to-date" is literal: NayaFlow installs a bundle only on the keyboard firmware it goes with.
+  Every release, official and beta, carried one left image and one bundle. Those pairs are the
+  evidence, and the rule OpenFlow applies is a **range**: a bundle goes with every keyboard version
+  from the first it shipped with up to the first keyboard version the next bundle shipped with.
+  No beta bundle is new (all are byte-identical to official ones), but beta keyboards move one
+  boundary: 2.3.3 first shipped with the beta 3.40.0, and 2.3.2 was still shipping with the beta
+  3.39.4. No release we hold carried a 2.3.0 or 2.3.1.
+
+| module bundle | goes with keyboard | seen with (official / beta) |
+|---|---|---|
+| 2.3.3 | 3.40.0 and later | 3.41.0 / 3.40.0, 3.40.4, 3.41.0 |
+| 2.3.2 | 3.31.1 up to 3.40.0 | 3.31.1, 3.35.4 / 3.31.1, 3.35.4, 3.39.4 |
+| 2.2.0 | 3.29.1 up to 3.31.1 | 3.29.1 / 3.29.1 |
+| 2.1.2 | 3.28.7 up to 3.29.1 | 3.28.7 / none |
+| 2.1.1 | unknown (1.14.3's keyboard declares no version) | withheld |
+| (unversioned) | unknown (1.11.x keyboards declare no version) | withheld |
+
+* The module must be switched on. "Allow up to 7 seconds" for it to appear, and up to a minute
+  the first time a Tune is updated.
+* A **keyboard** firmware update wants the opposite: "Please ensure NO modules are connected to
+  both of your Create halves."
+
+### The sequence
+
+1. **Stored bundle check.** `MODULE_FILE_FW_VERSION` (0xDE/0x100A) reads the version of the bundle
+   the left half holds. If it equals the bundle being installed, **the upload is skipped** and the
+   run goes straight to step 3.
+2. **Bundle upload.** `MCU BOOT RESET` (0x10AE), then SMP to **`image: 4`**, `len 0x100000`, the
+   bundle's SHA-256 in the first request, **512-byte chunks**. One "Timeout waiting for response"
+   3 s in (the erase), about 65 s for the whole MiB. The SHA sent was `97d94e9e3d8bfc87...`, the
+   2.3.3 `FlashMemory.bin` byte for byte. **Nothing is sent after the last chunk**: no `os reset`.
+   The half restarts on its own about a second later.
+3. **Program the module.** With the half back in the application: `DETECT_MODULE`, then
+   **`MODULE_FWUP` = `DE 1005`, dest 0x50, one byte, `01` for a Touch.** It is the plain type number
+   (1 Touch, 2 Track, 3 Tune), not the side-dependent dock address (0x10/0x11). **It gets no
+   reply.** The module's LEDs go out for 10 to 15 s while the keyboard programs it from the stored
+   bundle, then **the whole keyboard restarts** about 32.6 s after the command.
+4. **Version check.** With the half back: `GET_MODULE_FW_VERSION` must equal the bundle's version.
+   NayaCore then re-reads BLE status and reports success.
+
+### The half did not come back on USB by itself
+
+After **both** self-restarts (after the upload, and after `MODULE_FWUP`) the bus shows the half
+passing through its bootloader (PID 0x006F) for about 25 ms, and then **nothing**: the
+application (0x0064) never enumerated until the USB cable was unplugged and plugged back in. The
+half ran on its battery the whole time, LEDs normal. The Touch showed no cursor only because the
+half had no host link.
+
+NayaCore allows 300 s per step but only checks that clock on a device event. The first run sat
+for 21 minutes and failed ("Device is not available") the moment the cable was replugged. The
+second run was replugged 160 s after the restart and passed (205 s in total). Seen 2 of 2 times
+on this board; whether every board does it is not yet known. A flasher should watch for the half
+and ask for a cable replug if it has not returned within about 30 s, rather than wait on it.
