@@ -437,9 +437,14 @@ two runs (the first stalled, see below). Evidence lives in the NayaOS repo under
    **`MODULE_FWUP` = `DE 1005`, dest 0x50, one byte: `01` for a Touch, `02` for a Tune** (the Tune's
    byte captured from NayaFlow's Force Update -> Tune, same day). It is not the side-dependent dock
    address (0x10/0x11), and it is **not** nayactl's MODULE_TYPES numbering (1 Touch, 2 Track,
-   3 Tune): `03` sent to a Tune made the keyboard program it with the wrong module app, and it came
-   back dark reporting dock address 0x4A until a forced `02` restored it. The Track's byte has not
-   been captured. **It gets no reply.** The module's LEDs go out for 10 to 15 s while the keyboard programs it from the stored
+   3 Tune): `03` sent to a Tune made the keyboard program it with the wrong module app (the
+   Track's), and it came back dark reporting dock address 0x4A until a forced `02` restored it.
+   **Track = `03`**, read from NayaCore's own code: `Naya_DeviceManager::doUpdateModuleOperations`
+   (NayaCore 6.11.0, mac x86_64, symbols intact) builds the payload as `QByteArray(1, N)` in each
+   forced branch, with N = 1 for `ModuleFW_Touch_Upload`, 2 for `ModuleFW_Tune_Upload` and 3 for
+   `ModuleFW_Track_Upload`. Touch and Tune match their wire captures, which is what makes the
+   Track's value trustworthy; NayaFlow will not Force Update a module it recognises, so it could
+   not be captured. **It gets no reply.** The module's LEDs go out for 10 to 15 s while the keyboard programs it from the stored
    bundle, then **the whole keyboard restarts** about 32.6 s after the command.
 4. **Version check.** With the half back: `GET_MODULE_FW_VERSION` must equal the bundle's version.
    NayaCore then re-reads BLE status and reports success.
