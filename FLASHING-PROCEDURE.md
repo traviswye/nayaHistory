@@ -400,13 +400,16 @@ two runs (the first stalled, see below). Evidence lives in the NayaOS repo under
   bay. A right-bay module is moved to the left bay to be updated.
 * "Up-to-date" is literal: NayaFlow installs a bundle only on the keyboard firmware it goes with.
   Every release, official and beta, carried one left image and one bundle. Those pairs are the
-  evidence, and the rule OpenFlow applies is a **range**: a bundle goes with every keyboard version
-  from the first it shipped with up to the first keyboard version the next bundle shipped with.
+  evidence. The rule OpenFlow applies is **one-sided**: a bundle needs at least the first keyboard
+  firmware it shipped with, and any newer keyboard is fine, because modules are backward
+  compatible (every module here ran 2.1.2 on 3.41.0 keyboards). So 2.3.3 needs 3.40.0 or newer,
+  and a 3.41.0 keyboard can take 2.3.3, 2.3.2, 2.2.0 or 2.1.2. The table's upper ends only say
+  which bundle is the NEWEST for a keyboard, which is the one installed by default.
   No beta bundle is new (all are byte-identical to official ones), but beta keyboards move one
   boundary: 2.3.3 first shipped with the beta 3.40.0, and 2.3.2 was still shipping with the beta
   3.39.4. No release we hold carried a 2.3.0 or 2.3.1.
 
-| module bundle | goes with keyboard | seen with (official / beta) |
+| module bundle | newest for keyboard | seen with (official / beta) |
 |---|---|---|
 | 2.3.3 | 3.40.0 and later | 3.41.0 / 3.40.0, 3.40.4, 3.41.0 |
 | 2.3.2 | 3.31.1 up to 3.40.0 | 3.31.1, 3.35.4 / 3.31.1, 3.35.4, 3.39.4 |
