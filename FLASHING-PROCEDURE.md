@@ -302,3 +302,72 @@ python tools/flash_map.py v1.25.1 releases/v1.25.1/NayaFlow-1.25.1-mac.zip   # f
 The per-tag reports are not committed; regenerate any of the 25 with the command above (`tools/flash_map.py` moved here from the NayaOS working tree on 2026-09-16).
 
 _Firmware images are archived under `firmware-history/`; no keys are stored anywhere in this repo (none was found)._
+
+## Measured on hardware, both halves (2026-09-20)
+
+Everything above this heading is derived from the 25 vendor releases and from NayaCore's
+disassembly. This section is different: it is what a real Create did when OpenFlow flashed it.
+Where the two ever disagree, this section is the observation and the one above is the inference.
+
+**Both halves of a warranty board were taken 3.35.4 -> 3.41.0**, one at a time, vendor-exact,
+whole resource to `image: 2`. Both succeeded. The right half's bootloader behaved exactly like the
+left's; nothing about the flash is central-only.
+
+### Timings
+
+| step | left | right |
+|---|---|---|
+| first chunk (slot erase) | ~6 s | ~17 s |
+| whole upload, 663552 B in 1296 chunks | 57.6 s | 77.7 s |
+| sustained rate | ~11.5 KB/s | ~8.5 KB/s |
+| `os reset` -> application | ~8 s | ~8 s |
+
+### Four behaviours a flasher must handle
+
+**1. The first chunk erases the whole 648 KiB secondary slot before it answers.** It blocks for
+6 to 17 seconds. Nothing else in the upload is slow. A per-request timeout of a few seconds will
+treat a working device as dead and abort. Only offset 0 pays this.
+
+**2. The resource's trailer arms a permanent swap the instant it lands, and MCUboot can carry the
+swap out before the flasher reads back.** Both flashes showed the new image already in **slot 0**
+with the image it replaced moved down to **slot 1**:
+
+```
+left   slot 0 = 479e89ba... 3.41.0 left gen A      slot 1 = 036059b2... 3.35.4 (old)
+right  slot 0 = 2abb2695... 3.41.0 right gen A     slot 1 = 959fbae1... 3.35.4 (old)
+```
+
+A verify that checks only the secondary slot finds the image it just replaced and concludes the
+upload was corrupt. Detect a completed swap by: new image in slot 0 AND the previously running
+hash in slot 1, and only when those two differ.
+
+**3. After the last chunk the port throws (`ClearCommError failed`) or times out for tens of
+seconds while MCUboot acts on the trailer, and it re-enumerates.** A single read-back attempt
+there fails. Be patient and re-discover the answering port.
+
+**4. `os reset` boots the half into the application in about 8 seconds. A power cycle is NOT
+required** -- but the reset must go to the CDC port that answers SMP. Each half in recovery
+presents two ports; the other is a log port that accepts the open, swallows the frame and reports
+nothing, so a reset addressed there appears to be sent and does nothing.
+
+### There is no narrow recovery window
+
+A half left in MCUboot was still answering `image_state` minutes later. The bootloader does not
+boot on by itself after a few seconds of SMP silence. Nothing in a flashing flow needs to race.
+
+### Pairing and firmware mismatch
+
+**A flash does not touch BLE bonds.** Bond tables were byte-identical before and after two slot
+erases, two writes and two swaps, on both halves. A pairing repair is a remedy for an
+already-broken board, not a routine post-update step.
+
+**Halves on different firmware still type.** Left 3.41.0 with right 3.35.4 typed on both hands.
+NayaCore's "Devices have different firmware versions" is a policy in its pairing flow, not a
+description of a dead link. A mismatch does break two things, both self-resolving the moment the
+halves match:
+
+* the peripheral's LEDs go dark -- the **LED payload changed in 3.41** (it was already known to
+  differ between 3.28.7 and 3.41; this dates the change);
+* the peripheral's own USB command interface completes the handshake and then returns **empty
+  payloads**, so it looks unreadable while working normally. It stays reachable through the
+  central half's port at `dest 0x51`.
