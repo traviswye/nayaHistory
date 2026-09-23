@@ -180,8 +180,10 @@ firmware-history-beta/
   release note. `firmware_version` is the first of them. Two notes disagree with their installer
   (`firmware_version_conflict`): beta 1.16.0 announces keyboard 3.31.1 and modules 2.3.2 but carries the 1.15.x
   images (3.29.1, 2.2.0) byte for byte, and beta 1.22.0 says 3.39.3 where its NayaCore and app JS both say 3.39.4.
-- Regenerate with `python tools/extract_beta.py --force` (reads the beta installers' macOS zips; the header facts
-  come from OpenFlow's `tools/build_firmware_catalog.py`).
+- The beta tree was produced with a driver script built on `tools/extract_history.py`, `tools/carve_fw.py` and
+  `tools/flash_map.py`, reading the beta installers' macOS zips. It is not published yet because it takes its
+  header parsing from OpenFlow's `tools/build_firmware_catalog.py`, which is not public; it will follow when
+  OpenFlow is released. Every fact it wrote is in `firmware-history-beta/MANIFEST.json`.
 
 | Beta release | Published | Keyboard fw | Module fw | Images |
 |---|---|---|---|---|
