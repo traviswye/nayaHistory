@@ -431,9 +431,12 @@ two runs (the first stalled, see below). Evidence lives in the NayaOS repo under
    2.3.3 `FlashMemory.bin` byte for byte. **Nothing is sent after the last chunk**: no `os reset`.
    The half restarts on its own about a second later.
 3. **Program the module.** With the half back in the application: `DETECT_MODULE`, then
-   **`MODULE_FWUP` = `DE 1005`, dest 0x50, one byte, `01` for a Touch.** It is the plain type number
-   (1 Touch, 2 Track, 3 Tune), not the side-dependent dock address (0x10/0x11). **It gets no
-   reply.** The module's LEDs go out for 10 to 15 s while the keyboard programs it from the stored
+   **`MODULE_FWUP` = `DE 1005`, dest 0x50, one byte: `01` for a Touch, `02` for a Tune** (the Tune's
+   byte captured from NayaFlow's Force Update -> Tune, same day). It is not the side-dependent dock
+   address (0x10/0x11), and it is **not** nayactl's MODULE_TYPES numbering (1 Touch, 2 Track,
+   3 Tune): `03` sent to a Tune made the keyboard program it with the wrong module app, and it came
+   back dark reporting dock address 0x4A until a forced `02` restored it. The Track's byte has not
+   been captured. **It gets no reply.** The module's LEDs go out for 10 to 15 s while the keyboard programs it from the stored
    bundle, then **the whole keyboard restarts** about 32.6 s after the command.
 4. **Version check.** With the half back: `GET_MODULE_FW_VERSION` must equal the bundle's version.
    NayaCore then re-reads BLE status and reports success.
