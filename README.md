@@ -113,3 +113,10 @@ signature — so a firmware built by anyone else cannot boot today, whatever too
 plan is a community-signed bootloader and an open firmware to go with it. When that happens it
 belongs in its own repository with its own trust root, and OpenFlow gains a second source
 alongside this one rather than loosening what it checks about this one.
+
+## License
+
+The documents, manifests and tools in this repository are licensed under the Apache License 2.0
+(`LICENSE`). The license does not cover the vendor firmware images under `firmware-history/` and
+`firmware-history-beta/`, or the NayaFlow installers they were extracted from: those are Naya's
+material, preserved here as extracted from publicly distributed NayaFlow releases.
