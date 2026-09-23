@@ -48,10 +48,12 @@ protocol (below) is standard MCUboot/SMP; the two on-device inference points are
    the standard SMP serial framing. NayaCore's client functions: `uploadImageToSlot` /
    `uploadImageToCreateSlot` / `uploadImageToModulesSlot`, chunked via `uploadImageChunk`, framed by
    `sendFramedCommand`, parsed by `parseSMPResponse` (all also present in `…ERK` variants — see note).
-4. **Upload the image to the secondary slot, then mark + reset.** This is the standard MCUboot flow:
-   image upload (img-mgmt group), set the uploaded image pending (test or confirm), then an os-mgmt
-   reset so MCUboot swaps and boots it. The device validates the RSA-2048 signature and AES-decrypts
-   the payload itself during the swap.
+4. **Upload the whole resource to the secondary slot, then reset.** Each resource is a full slot
+   with an MCUboot swap trailer already written, so the upload itself arms a permanent swap; NayaCore
+   never marks the image, it only sends an os-mgmt reset so MCUboot swaps and boots it. There is no
+   separate mark step on this bootloader: an `image state` write returns rc 8 (ENOTSUP), measured
+   2026-09-20 (see "Measured on hardware" below). The device validates the RSA-2048 signature and
+   AES-decrypts the payload itself during the swap.
 5. **Modules and keymaps go the same way.** `uploadImageToModulesSlot` handles the module bundle
    (`FlashMemory.bin`, a LittleFS image), and `keymapUpload` pushes keymaps — both over the same SMP
    link.
@@ -211,11 +213,14 @@ What that means on the wire (MCUboot `boot_serial.c` / `bootutil_public.c`, read
 - Chunking: NayaCore sends `min(remaining, 512)` bytes per frame (`uploadImageToSlot`,
   x86_64 `0x100115e95`).
 
-Consequence for a flasher that wants to check before it arms: upload only the MCUboot image
+On paper, a flasher that wants to check before it arms could upload only the MCUboot image
 (`mcuboot_image_len` bytes), leave the trailer area erased, verify the slot's hash, then write the
-trailer through `image state` with the hash (`confirm` false = TEST swap, boots once and reverts unless
-the application confirms itself; true = PERMANENT). OpenFlow does that by default and offers the
-vendor's whole-resource upload as an explicit alternative.
+trailer through `image state` with the hash. **On the Create that route does not work:** the
+bootloader answers an `image state` write with rc 8 (ENOTSUP), measured on 2026-09-20, so such a
+flasher would upload the whole image and then fail at the mark, and there is no TEST swap that boots
+once and reverts. The vendor's whole-resource upload is the only route that works, and it is what
+OpenFlow uses by default. What makes it survivable is MCUboot's own signature check before the swap
+and a version read after the reset, not a trial boot.
 
 ## Product ids, vendor-exact (2026-09-16)
 
@@ -247,13 +252,16 @@ this is the table the binary compares against.
    the real VID/PIDs from live hardware — they are native constants, not in the JS.
 3. **Ship the stock encrypted images** carved from the releases (per generation). They upload and boot
    without any key; the device does the crypto.
-4. **Flash sequence:** upload image to secondary slot → mark pending (test/confirm) → reset → let
-   MCUboot swap. Same for the module bundle via the modules slot.
+4. **Flash sequence:** upload the whole resource (trailer included) to the secondary slot
+   (`image: 2`) → `os reset` on the port that answers SMP → MCUboot swaps and boots it. No mark step:
+   `image state` writes are ENOTSUP on this bootloader. The module bundle goes the same way via the
+   modules slot (`image: 4`).
 5. **Custom/unsigned firmware is out of scope for a pure host flasher** — MCUboot rejects unsigned
    images, so custom firmware needs the signing key (not recoverable from installers) or an SWD
    bootloader reconfigure. See `SECRET-HUNT.md`.
-6. **Confirm on a live unit:** exact VID/PIDs, the SMP MTU/chunk size, and whether a recovery-mode
-   entry is needed before the device accepts SMP.
+6. **Confirmed on live units (2026-09-16 to 2026-09-22):** the application and MCUboot PIDs of both
+   halves, 512-byte chunks, and entry into MCUboot with `RESET/MCU_BOOT` before SMP is accepted. See
+   "Measured on hardware" below for timings and failure modes.
 
 ---
 
