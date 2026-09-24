@@ -442,10 +442,12 @@ two runs (the first stalled, see below). Evidence lives in the NayaOS repo under
    **Track = `03`**, read from NayaCore's own code: `Naya_DeviceManager::doUpdateModuleOperations`
    (NayaCore 6.11.0, mac x86_64, symbols intact) builds the payload as `QByteArray(1, N)` in each
    forced branch, with N = 1 for `ModuleFW_Touch_Upload`, 2 for `ModuleFW_Tune_Upload` and 3 for
-   `ModuleFW_Track_Upload`. Touch and Tune match their wire captures, which is what makes the
-   Track's value trustworthy; NayaFlow will not Force Update a module it recognises, so it could
-   not be captured. **It gets no reply.** The module's LEDs go out for 10 to 15 s while the keyboard programs it from the stored
-   bundle, then **the whole keyboard restarts** about 32.6 s after the command.
+   `ModuleFW_Track_Upload`. It has since been **captured on the wire** from NayaFlow's own Force
+   Update -> Track (2026-09-23), and an OpenFlow downgrade with `03` read back as a correct Track.
+   **The keyboard acknowledges it at once with an empty reply** (`aa 50 00 00 de 03 10 05 00 15 04`,
+   in all four NayaFlow captures; earlier notes here said "no reply", which was wrong). The module's
+   LEDs go out for 10 to 15 s while the keyboard programs it from the stored bundle, then **the
+   whole keyboard restarts** about 32 to 40 s after the command.
 4. **Version check.** With the half back: `GET_MODULE_FW_VERSION` must equal the bundle's version.
    NayaCore then re-reads BLE status and reports success.
 
@@ -462,3 +464,17 @@ for 21 minutes and failed ("Device is not available") the moment the cable was r
 second run was replugged 160 s after the restart and passed (205 s in total). Seen 2 of 2 times
 on this board; whether every board does it is not yet known. A flasher should watch for the half
 and ask for a cable replug if it has not returned within about 30 s, rather than wait on it.
+
+### A module that hangs the keyboard (Track, 2026-09-23)
+
+One Track update never finished: after `MODULE_FWUP 03` the keyboard neither restarted nor came
+back, stayed on USB without answering, and needed a **power cycle** (a replug did not clear it).
+From then on the Track answered like an empty bay (handshake `00 f0`, DETECT `01`) and every later
+`MODULE_FWUP`, NayaFlow's included, on two keyboards and after pulling the Track's battery, hung
+the keyboard the same way. The same byte on the same Track had worked ten minutes earlier; the
+cause is not known. The modules are STM32F411s running ST's SBSFU (the `.sfb` apps are `SFU1`
+images), so the remaining routes are the Track's SWD pads or its dock UART. Full record and the
+bench plan: NayaOS `docs/track-recovery.md`.
+
+A flasher must therefore also handle "no restart within ~2 minutes of `MODULE_FWUP`": check
+whether the half still answers, and if it does not, ask for a power cycle, then a replug.
